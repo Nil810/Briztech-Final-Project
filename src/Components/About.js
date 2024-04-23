@@ -40,7 +40,7 @@ const About = () => {
   return (
     <div class="main-body">
     
-    <a href="https://wa.me/918102774475" target=""><img src="/images/chatbot.gif" alt="chatbot" className="chat-gif"/></a>
+    <a href="https://wa.me/918102774475" target=""><img src="Briztech-Final-Project/images/chatbot.gif" alt="chatbot" className="chat-gif"/></a>
 
     <div class="main-body-head">
          <h1>
@@ -71,7 +71,7 @@ const About = () => {
     <hr style={{color: "#f5f4f0"}}/> 
 
         <div class="about-para-div">
-            <img src="/images/logo.png" alt="logo" class="about-us-image"/>
+            <img src="/Briztech-Final-Project/images/logo.png" alt="logo" class="about-us-image"/>
             
         <h2><b><u>Why Choose Your Herbs?</u></b></h2>
         

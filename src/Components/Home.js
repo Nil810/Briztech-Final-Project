@@ -31,7 +31,7 @@ const Home = () => {
 
 <div className="carousel">
 
-   <ReactPlayer url={'/videos/carouselvideo.mp4'} playing={true} muted={true} loop={true} width="100%" height="100%" className="carousel-video"/>
+   <ReactPlayer url={'/Briztech-Final-Project/videos/carouselvideo.mp4'} playing={true} muted={true} loop={true} width="100%" height="100%" className="carousel-video"/>
   
   <div className="carousel-content">
     <div className="img1-heading" ><h1>Nourish Your Immune System</h1></div>
