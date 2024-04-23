@@ -1,0 +1,155 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Poppins", Sans-serif;
+}
+
+::-webkit-scrollbar { 
+    width:10px;
+}
+::-webkit-scrollbar-track{
+    background-image: linear-gradient(45deg,rgb(204, 124, 124),white,rgb(167, 167, 236));
+}
+::-webkit-scrollbar-thumb{
+    background-image:radial-gradient(rgb(7, 116, 7),rgb(214, 136, 136),rgb(116, 27, 27));
+    border-radius:10px;
+}
+
+html{
+    font-size:62.5%;
+}
+@media screen and (max-width:323px){
+    html{
+        font-size: 14.5%;
+        
+    }
+    .prod-list{
+        left:41rem;
+    }
+    .more{
+        right:23rem;
+    }
+}
+@media (min-width:361px) and (max-width:379px){
+    html{
+        font-size: 17%;
+        
+    }
+    .prod-list{
+        left:43rem;
+    }
+    .more{
+        right:28rem;
+    }
+   
+}
+@media (min-width:380px) and (max-width:418px){
+    html{
+        font-size: 18%;
+        
+    }
+    .prod-list{
+        left:43rem;
+    }
+    .more{
+        right:28rem;
+    }
+   
+}
+@media (min-width:419px) and (max-width:459px){
+    html{
+        font-size: 19.5%;
+        
+    }
+    .prod-list{
+        left:47rem;
+    }
+    .more{
+        right:33rem;
+    }
+   
+}
+
+
+@media (min-width:460px) and (max-width:489px){
+    html{
+        font-size: 22%;
+        
+    }
+    .prod-list{
+        left:47rem;
+    }
+    .more{
+        right:35rem;
+    }
+}
+
+
+@media (min-width:490px) and (max-width:524px){
+    html{
+        font-size: 23%;
+        
+    }
+    .prod-list{
+        left:48rem;
+    }
+    .more{
+        right:36rem;
+    }
+}
+@media (min-width:525px) and (max-width:588px){
+html{
+    font-size: 25%;
+    
+}
+
+}
+@media (min-width:589px) and (max-width:672px){
+    html{
+        font-size: 28%;
+        
+    }
+   
+    }
+@media (min-width:673px) and (max-width:749px){
+    html{
+        font-size: 32%;
+        
+    }
+
+    }
+
+@media (min-width:750px) and (max-width:841px){
+ html{
+    font-size:35%;
+  }
+
+ 
+} 
+@media (min-width:842px) and (max-width:991px){
+        html{
+            font-size: 40%;   
+        }
+        .prod-list{
+            left:50rem;
+        }
+        .more{
+            right:36rem;
+        }
+       
+        }
+@media(min-width:1025px) and (max-width:1366px){
+        html{
+                font-size: 62.5%;
+                
+        }
+       
+        }
+
+@media (min-width:1367px) and (max-width:1920px){
+    html{
+        font-size: 64%;
+    }
+    
+}

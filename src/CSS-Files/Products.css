@@ -1,0 +1,117 @@
+.box{
+    height: 121rem;
+    width:80%;
+    display: flex;   
+    margin:2rem auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
+}
+
+.marquee{
+    height:2.8rem;
+    width:100%;
+    position: relative;
+    font-size: 2rem;
+    top:10.8rem;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(232, 238, 245);
+    color:rgb(83, 21, 21);
+    filter:drop-shadow( 0rem 0rem 0.4rem #3d3d3b);
+}
+
+.pic-div {
+    height:42.7rem;
+    width:29rem;
+    background-image:linear-radient(45deg,rgb(235, 232, 91),white);
+    border:2px solid rgb(240, 170, 170);
+    position:relative;
+    top:12rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    text-align: center; 
+    margin:4rem auto;
+    line-height:1.5rem;
+}
+.pic-div p{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height:2rem;
+    padding:0rem 2rem;
+    color: rgb(83, 21, 21);
+}
+.pic-div h3{
+    color:red;
+    padding:0rem 2rem;
+    margin-left: 0.2rem;
+}
+.pic-div h4{
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.pic-div img{
+    height:24rem;
+    max-width:80%;
+    padding-top: 1rem;
+    aspect-ratio: 3/3;
+}
+.pic-div:hover{
+    color:rgb(148, 147, 189);
+    border:0.2rem solid rgb(240, 89, 89);
+    box-shadow: 0rem 0rem 1rem #000;
+    filter:drop-shadow( 0rem 0rem 1rem #94c8eb);
+}
+.pic-div p:hover{
+color:rgb(148, 147, 189);
+}
+img:hover{
+    transform: scale(1,1);
+}
+.price{
+    display:flex;
+    justify-content: center;
+    gap:0.5rem;
+    padding-top:1rem;
+}
+.price h3{
+    font-size:1.6rem;
+    padding-left: 0.5rem;
+}
+.price-cross{
+    text-decoration: line-through;
+}
+.box button{
+    height:3rem;
+    font-size: 1.5rem;
+    width:100%;
+    border:0.2rem solid red;
+   margin-top: 1.7rem;
+   background-color: rgb(240, 88, 88);
+   color:rgb(247, 243, 243);
+}
+.box button:hover{
+    background-color: rgb(145, 37, 37);
+}
+.nxt-arrow{
+    height:4.7rem;
+    width:4.7rem;
+    border-radius: 50%;
+    background-color: wheat;
+    box-shadow: 0rem 0rem 1rem #000;
+    position: absolute;
+    right:62rem;
+    top:120rem;
+}
+.prev-arrow{
+    height:4.7rem;
+    width:4.7rem;
+    border-radius: 50%;
+    background-color: wheat;
+    box-shadow: 0rem 0rem 1rem #000;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    right:70rem;
+    top:120rem;
+}

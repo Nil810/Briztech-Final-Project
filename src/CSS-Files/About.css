@@ -1,0 +1,270 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+    .chat-gif{
+        height:13rem;
+        width:13rem;
+        position:fixed;
+        top:54rem;;
+        right:0.5rem;
+        z-index:2;
+        filter:drop-shadow( 10px 10px 20px #2e2e03);
+    }
+    .main-body{
+        position: relative;
+        top: 3rem;
+        width:100%;
+        height:240.8rem;
+        background-image: linear-gradient(45deg,rgb(241, 206, 206),rgb(187, 250, 187),rgb(245, 245, 215));
+        box-shadow: 0px 0px 10px #2c2c2c;
+    }
+    .main-body-head{
+    
+        background-image: linear-gradient(45deg,rgb(156, 228, 156),rgb(175, 148, 148));
+        box-shadow: 0rem 0rem 1rem #7a7979;
+        max-width: 120rem;
+        margin:0rem auto;
+        height: 10rem;
+        position: relative;
+        top:7.6rem;
+        z-index: 1;
+    }
+    .main-body-head h1{
+        padding-top: 0.5rem;
+        background: url("/public/videos/smokenew.gif");
+        filter:blur(1);
+        box-shadow: 0rem 0rem 1rem #000;
+        background-clip:text;
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+        width:100%;
+        text-align: center;
+        letter-spacing: 1.2rem;
+        color:#f0cb44;
+        font-size:8.5rem;
+        font-family: sans-serif;
+        z-index: 4;
+    }
+    
+    .main-body-content {
+        max-width: 120rem;
+        height:220rem;
+        margin:0rem auto;
+        padding: 4rem;
+        border:5px solid rgb(145, 144, 144);
+        box-shadow: 0rem 0.2rem 1rem rgba(0, 0, 0, 0.1);
+        position:relative;
+        top:7.6rem;
+    }
+    
+    .main-body-content h1 {
+        font-size: 3.3rem;
+        text-align: center;
+    }
+    
+    .main-body-content p :not(.para1-about) {
+        font-size: 2.3rem;
+        color: #666;
+    }
+    
+    
+    .para1-about{
+        text-align: center;
+        padding:4rem 8rem;
+        color: #666;
+        margin-left:7rem;
+        width:100rem;
+        line-height: 3.5rem;
+        font-size: 2.8rem;
+    }
+    .about-para-div{
+        height:50rem;
+        width:100%;
+    }
+    .about-us-image{
+        height:20rem;
+        width:20rem;
+        position: absolute;
+        top:58.2rem;
+        right:14rem;
+        background: none;
+        filter:drop-shadow( 0rem 0rem 1rem #0e0e0d);
+        animation:rotate  24s linear infinite;
+    }
+    
+    @keyframes rotate{
+        from{
+            transform:rotate(0deg);
+        }
+        to{
+            transform:rotate(360deg);
+        }
+    }
+    .about-para-div ul {
+        list-style-type: none;
+        margin-left: 12rem;
+        font-size: 2.3rem;
+        color: #424242;
+    }
+    .about-para-div h2{
+        font-size: 3rem;
+        text-align: center;
+        margin:6rem 0rem;
+    }
+    .about-para-div p{
+        padding:4rem 12rem;
+        font-weight: 600;
+        font-size: 2.7rem;
+    
+    }
+    .team-section {
+        height:24rem;
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .team-head{
+        font-size: 5rem;
+        text-align: center;
+        margin: 1rem 0rem;
+        color:rgb(236, 222, 197);
+        text-decoration: dotted underline;
+        text-decoration-thickness: 1rem;
+        filter:drop-shadow( 0px 0px 1rem #16150e);
+    }
+    .team-member {
+        height: 20rem;
+        display: flex;
+        text-align: center;
+        background-color: #e2e2d9;
+        padding: 4rem;
+        border:1px solid gray;
+        border-bottom-left-radius:1rem;
+        border-bottom-right-radius: 1rem;
+        transition: transform 0.5s ease-in-out;
+    }
+    .team-member:hover {
+        transform: translateY(1rem);
+        display: block;
+        background-color: rgb(248, 245, 245);
+        border:none;
+        filter:drop-shadow( 0px 0px 1.5rem #f3e99d);
+        box-shadow: 0rem 0rem 1.5rem black;
+    }
+    .team-member:hover h3 {
+        text-decoration: solid underline;
+    }
+    
+    .team-member h3 {
+        font-size: 2.6rem;
+        color: #333;
+    }
+    
+    .team-member p {
+        font-size:2rem;
+        color: #888;
+    }
+    .role{
+        position:relative;
+        top:6rem;
+        height:9rem;
+        width:31.5rem;
+        border-top-left-radius:1rem;
+        border-top-right-radius:1rem;
+        color:whitesmoke;
+        background: #00000059;
+        box-shadow: 0rem 0rem 1.5rem #000;
+        font-size: 2.5rem;
+        text-align: center;
+        justify-content: center;
+        z-index: 1;
+        display: none;
+    
+    }
+    .role2{
+        position:relative;
+        top:6rem;
+        left:37.3rem;
+        height:9rem;
+        width:36.7rem;
+        border-top-left-radius:1rem;
+        border-top-right-radius:1rem;
+        color:whitesmoke;
+        display: none;
+        background: #00000059;
+        box-shadow: 0rem 0rem 1.5rem #000;
+        font-size: 2.5rem;
+        text-align: center;
+        justify-content: center;
+        z-index: 1;
+    }
+    .role3{
+        position:relative;
+        top:6rem;
+        left:80rem;
+        height:9rem;
+        display: none;
+        width:31rem;
+        border-top-left-radius:1rem;
+        border-top-right-radius:1rem;
+        color:whitesmoke;
+        background: #00000059;
+        box-shadow: 0rem 0rem 1.5rem #000;
+        font-size: 2.5rem;
+        text-align: center;
+        justify-content: center;
+        z-index: 1;
+       
+    }
+    .Commit {
+        margin: 4rem 0rem;
+        border-top: 0.1rem solid #ddd;
+        padding-top: 1rem;
+        text-align: center;
+    }
+    
+    .Commit h2 {
+        font-size: 3rem;
+        margin: 4rem 0rem;
+    }
+    
+    .Commit p {
+        font-size: 2.8rem;
+        color: #4b4a4a;
+        line-height: 4rem;
+        margin: auto;
+        width:103rem;
+    }
+    
+    .cont {
+        margin-top: 2rem;
+    }
+    
+    .cont a {
+        color: #007bff;
+        text-decoration: none;
+    }
+    .connect-sec{ 
+        font-size: 3rem;
+        color:rgb(82, 59, 59);
+    }
+    .logo-section{
+        position: relative;
+        color:#5a5858;
+    }
+    .logo1:hover{
+      transform: scale(1.5);
+      filter:drop-shadow( 10px 10px 20px #70701a);
+    }
+    .main-foot{
+        height: 8rem;
+        margin-left: -4.5rem;
+        margin-right: -4.5rem;
+        background-image: linear-gradient(45deg,rgb(156, 228, 156),rgb(175, 148, 148));
+        box-shadow: 0rem 0rem 1.5rem #000;
+        z-index: 1;
+    }    

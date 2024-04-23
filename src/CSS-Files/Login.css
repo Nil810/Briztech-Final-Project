@@ -1,0 +1,166 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman';
+}
+.toast{
+    font-size: 2rem;
+    text-align: center;
+    color:rgb(87, 22, 22);
+    font-weight: 500;
+    margin:-9.4rem 5rem;
+    filter:drop-shadow( 1rem 1rem 2rem #2e2e03);
+    border-radius: 1rem;
+}
+.login-outer , .signup-outer{
+    height:74rem;
+    width:100%;
+    position: relative;
+    top:10rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    backdrop-filter: blur(1rem);
+    
+}
+.login-bg {
+    position: absolute;
+    background-size: cover;
+    width: 100%;
+    filter:opacity(0.7);
+    z-index: -1;
+}
+.login-inner {
+    color: white;
+    height:45rem;
+    width:45rem;
+    margin: auto;
+    position: relative;
+    top:8rem;
+    background: transparent;
+    backdrop-filter: blur(1rem);
+    border: 0.1rem solid rgb(180, 180, 180);
+    box-shadow: 0rem 0rem 1.5rem rgba(230, 227, 109, 0.438);
+    /* filter:drop-shadow( 0rem 0rem 1rem #292928); */
+    border-radius: 0.3rem;
+    text-align: center;
+}
+.login-inner:hover , .signup-inner:hover{
+box-shadow: 0rem 0rem 2rem #000;
+color:rgb(1, 1, 54);
+}
+.signup-inner{
+    color: white;
+    height:48rem;
+    width:47rem;
+    margin: auto;
+    position: relative;
+    top:6rem;
+    background: transparent;
+    backdrop-filter: blur(1rem);
+    border: 0.1rem solid rgb(180, 180, 180);
+    box-shadow: 0rem 0rem 1.5rem rgba(230, 227, 109, 0.438);
+    /* filter:drop-shadow( 0rem 0rem 1rem #292928); */
+    border-radius: 0.3rem;
+    text-align: center;
+}
+.close{
+    height:2.5rem;
+    font-size: 2rem;
+    margin:0.7rem;
+    width:2.2rem;
+    float:right;
+}
+.close:hover{
+    background-color: rgb(240, 116, 116);
+    text-decoration: line-through;
+}
+.login-inner h1 , .signup-inner h1{
+    font-size: 3.4rem;
+    margin:5rem auto;
+    text-align: center;
+    justify-content: center;
+    
+}
+.login-inner input , .signup-inner input{
+    width: calc(100% - 6rem);
+    padding: 0.5rem;
+    margin:1rem auto;
+    font-size: 1.8rem;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: transparent;
+    color:black;
+}
+
+.login-inner i , .signup-inner i {
+    position: absolute;
+    font-size: 2rem;
+    margin-top:1.2rem;
+    right: 3rem;
+    color: white;
+}
+
+.login-btn {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    margin-top:3rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    background-color: rgb(204, 28, 204);
+    color: black;
+    border: none;
+    transition: all 0.3s ease-in;
+}
+
+.login-btn:hover {
+    color: rgb(204, 28, 204);
+    background-color: black;
+    border: 1px solid white;
+    box-shadow: 0rem 0rem 1rem rgb(63, 230, 63);
+}
+
+.forget {
+    font-size: 1.7rem;
+    margin-top: 1.3rem;
+}
+
+.forget a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.forget a:hover {
+    text-decoration: underline;
+    color: rgb(26, 24, 153);
+}
+
+.Create {
+    background-color: rgb(204, 28, 204);
+    color: black;
+    height:3.2rem;
+    width:calc(100% - 6rem);
+    margin:auto;
+    font-weight: 600;
+    font-size: 1.9rem;
+    text-align: center;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.Create:hover {
+    color: rgb(204, 28, 204);
+    background-color: black;
+    border: 1px solid white;
+}
+Link{
+    text-decoration: none;
+    color: black;
+}
