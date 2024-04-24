@@ -12,15 +12,6 @@
     filter:drop-shadow( 1rem 1rem 2rem #2e2e03);
     border-radius: 1rem;
 }
-.chat-gif{
-    height:13rem;
-    width:13rem;
-    position:fixed;
-    top:54rem;;
-    right:0.5rem;
-    z-index:2;
-    filter:drop-shadow( 10px 10px 20px #2e2e03);
-}
 
 .bn4 {
     padding: 0.6rem 1.3rem;

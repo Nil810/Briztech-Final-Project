@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     }
-    .chat-gif{
+    /* .chat-gif{
         height:13rem;
         width:13rem;
         position:fixed;
@@ -12,7 +12,7 @@
         right:0.5rem;
         z-index:2;
         filter:drop-shadow( 10px 10px 20px #2e2e03);
-    }
+    } */
     .main-body{
         position: relative;
         top: 3rem;

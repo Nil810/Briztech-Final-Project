@@ -4,7 +4,15 @@
     box-sizing: border-box;
     font-family: "Poppins", Sans-serif;
 }
-
+.chat-gif{
+    height:13rem;
+    width:13rem;
+    position:fixed;
+    top:53.5rem;
+    right:0.5rem;
+    z-index:2;
+    filter:drop-shadow( 10px 10px 20px #2e2e03);
+}
 ::-webkit-scrollbar { 
     width:10px;
 }
