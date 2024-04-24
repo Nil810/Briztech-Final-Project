@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Briztech-Final-Project/static/css/main.4943418e.css",
+    "main.css": "/Briztech-Final-Project/static/css/main.2eed946f.css",
     "main.js": "/Briztech-Final-Project/static/js/main.3446a795.js",
     "reactPlayerYouTube.js": "/Briztech-Final-Project/static/js/reactPlayerYouTube.e241decf.chunk.js",
     "reactPlayerSoundCloud.js": "/Briztech-Final-Project/static/js/reactPlayerSoundCloud.e217def4.chunk.js",
@@ -19,7 +19,7 @@
     "static/js/453.f291ff52.chunk.js": "/Briztech-Final-Project/static/js/453.f291ff52.chunk.js",
     "static/media/smokenew.gif": "/Briztech-Final-Project/static/media/smokenew.3e0aa5e2a45151ee2839.gif",
     "index.html": "/Briztech-Final-Project/index.html",
-    "main.4943418e.css.map": "/Briztech-Final-Project/static/css/main.4943418e.css.map",
+    "main.2eed946f.css.map": "/Briztech-Final-Project/static/css/main.2eed946f.css.map",
     "main.3446a795.js.map": "/Briztech-Final-Project/static/js/main.3446a795.js.map",
     "reactPlayerYouTube.e241decf.chunk.js.map": "/Briztech-Final-Project/static/js/reactPlayerYouTube.e241decf.chunk.js.map",
     "reactPlayerSoundCloud.e217def4.chunk.js.map": "/Briztech-Final-Project/static/js/reactPlayerSoundCloud.e217def4.chunk.js.map",
@@ -38,7 +38,7 @@
     "453.f291ff52.chunk.js.map": "/Briztech-Final-Project/static/js/453.f291ff52.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4943418e.css",
+    "static/css/main.2eed946f.css",
     "static/js/main.3446a795.js"
   ]
 }
