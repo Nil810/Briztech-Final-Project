@@ -1,3 +1,8 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .chat-gif{
     height:13rem;
     width:13rem;
