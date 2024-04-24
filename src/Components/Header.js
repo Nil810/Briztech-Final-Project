@@ -35,7 +35,9 @@ const Header = ({cartItems}) => {
     const cartClose=()=>{
         cartRef.current.style.display="none";
     }
-    
+    const barClick= () =>{
+        cartRef.current.style.display="block";
+    }
 
 
   return (
@@ -118,8 +120,8 @@ const Header = ({cartItems}) => {
     
     <div className="navbar">
         <div className="leftnav">
-            <span className="bars" onMouseOver={cartHover}><i className="fa-sharp fa-solid fa-bars" style={{color: "#d8b433"}}></i></span>
-            <img src="images/projectlogo2.png" alt="Your-Herbs-Logo" className="mainlogo"/> 
+            <span className="bars" onMouseOver={cartHover} onClick={barClick}><i className="fa-sharp fa-solid fa-bars" style={{color: "#d8b433"}}></i></span>
+            <img src="/Briztech-Final-Project/images/projectlogo2.png" alt="Your-Herbs-Logo" className="mainlogo"/> 
         </div>
     
         <ul className="centernav">  

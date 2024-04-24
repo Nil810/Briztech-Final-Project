@@ -9,7 +9,7 @@
 }
 
 .blogs-read-page1 , .blogs-read-page2 , .blogs-read-page3{
-    height:471rem;
+    height:505rem;
     width:100%;
     position: relative;
     top: 10.3rem;
@@ -28,11 +28,10 @@
     top:0.1rem;
     margin:auto;
     padding:4rem 8rem;
-    height:447rem;
+    height:481rem;
     max-width: 100rem;
     background-color: white;
     border:1px solid gray;
-    /* backdrop-filter: blur(10rem); */
     box-shadow: 0rem 0rem 1rem #817f7f; 
 
 }

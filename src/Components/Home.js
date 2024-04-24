@@ -11,8 +11,8 @@ const Home = () => {
    const mailinput = useRef();
    
    const subscribe = () => {
-    var email=mailinput.value;
-    if(email==="")
+    var email=document.querySelector(".emailinput").value;
+    if(email===""||!email.includes(".")||!email.includes("com")||!email.includes("@")||email.length<10||email.length>30)
         {
             
            toast("Please Enter Your Valid Email!");       

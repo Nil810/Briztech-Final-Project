@@ -19,46 +19,46 @@ const Products = () => {
         </div>   
     </Link>
 
-    <a href="Dental.html">
+    <Link to={"/dental"}>
         <div className="prod-inner-div">
             <img src="/Briztech-Final-Project/images/pasteimg.png" alt="toothpaste"/>
             <h3 className="prod-inner-cont">Dental Care</h3>
         </div>
     
-    </a>
-    <a href="shampoo.html">
+    </Link>
+    <Link to={"/shampoo"}>
         <div className="prod-inner-div">
             <img src="/Briztech-Final-Project/images/shampoo.png" alt="shampoo" className="shampoo-sample-img"/>
             <h3 className="prod-inner-cont">Shampoo /<br/>Conditioner</h3>
         </div>
-    </a>
+    </Link>
     
   
 </div>
 
   <div className="products">
 
-    <a href="oil.html">
+    <Link to={"/oil"}>
     <div className="prod-inner-div">
        
          <img src="/Briztech-Final-Project/images/oilsample.png" alt="oil"/>
         <h3 className="prod-inner-cont">Hair Oil</h3>
     </div>
-    </a>
+    </Link>
 
-    <a href="Health.html">
+    <Link to={"/health"}>
         <div className="prod-inner-div">   
             <img src="/Briztech-Final-Project/images/heathcare.png" alt="health drink"/>
             <h3 className="prod-inner-cont">Health Care</h3>
         </div>
-    </a>
+    </Link>
    
-    <a href="skin.html">
+    <Link to={"/skin"}>
         <div className="prod-inner-div">
             <img src="/Briztech-Final-Project/images/creamsample.png" alt="Skin care"/>
             <h3 className="prod-inner-cont">Skin Care</h3>
        </div>
-     </a> 
+     </Link> 
     
   </div>
 

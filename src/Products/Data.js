@@ -8,7 +8,7 @@ const data={
         price:249.00, 
         price2:475.00,
         discount:"47%",
-        image:"images/soap3.png",
+        image:"/Briztech-Final-Project/images/soap3.png",
 
     },
     {
@@ -19,7 +19,7 @@ const data={
         price:230.00,
         price2:460.00,
         discount:"50%",
-        image:"images/soap2.png",
+        image:"/Briztech-Final-Project/images/soap2.png",
 
     },
     {
@@ -30,7 +30,7 @@ const data={
         price:240.00,
         price2:495.00,
         discount:"52%",
-        image:"images/soap5.png",
+        image:"/Briztech-Final-Project/images/soap5.png",
 
     },
     {
@@ -41,7 +41,7 @@ const data={
         price:349.00,
         price2:575.00,
         discount:"39%",
-        image:"images/teasoap.png",
+        image:"/Briztech-Final-Project/images/teasoap.png",
 
     },
     {
@@ -52,7 +52,7 @@ const data={
         price:279.00,
         price2:485.00,
         discount:"42%",
-        image:"images/soappng.png",
+        image:"/Briztech-Final-Project/images/soappng.png",
 
     },
     {
@@ -63,7 +63,7 @@ const data={
         price:449.00,
         price2:620.00,
         discount:"28%",
-        image:"images/soap4.png",
+        image:"/Briztech-Final-Project/images/soap4.png",
 
     }
 ], productItems2:[
@@ -75,7 +75,7 @@ const data={
         price:350.00, 
         price2:620.00,
         discount:"44%",
-        image:"images/castoroil.png",
+        image:"/Briztech-Final-Project/images/castoroil.png",
     },
     {
         id:"8",
@@ -85,7 +85,7 @@ const data={
         price:389.00,
         price2:595.00,
         discount:"35%",
-        image:"images/Bhringrajoil.png",
+        image:"/Briztech-Final-Project/images/Bhringrajoil.png",
     },
     {
         id:"9",
@@ -95,7 +95,7 @@ const data={
         price:240.00,
         price2:495.00,
         discount:"51%",
-        image:"images/amlaoil.png",
+        image:"/Briztech-Final-Project/images/amlaoil.png",
     },
     {
         id:"10",
@@ -105,7 +105,7 @@ const data={
         price:649.00,
         price2:928.00,
         discount:"32%",
-        image:"images/rosemaryoil.png",
+        image:"/Briztech-Final-Project/images/rosemaryoil.png",
     },
     {
         id:"11",
@@ -115,7 +115,7 @@ const data={
         price:449.00,
         price2:620.00,
         discount:"28%",
-        image:"images/africaoil.png",
+        image:"/Briztech-Final-Project/images/africaoil.png",
     },
     {
         id:"12",
@@ -125,7 +125,7 @@ const data={
         price:395.00,
         price2:529.00,
         discount:"26%",
-        image:"images/herbaloil.png",
+        image:"/Briztech-Final-Project/images/herbaloil.png",
     }
     
 ],productItems3:[
@@ -137,7 +137,7 @@ const data={
         price:380.00, 
         price2:679.00,
         discount:"56%",
-        image:"images/mint-tonic.png",
+        image:"/Briztech-Final-Project/images/mint-tonic.png",
     },
     {
         id:"14",
@@ -147,7 +147,7 @@ const data={
         price:389.00,
         price2:595.00,
         discount:"35%",
-        image:"images/paste2.png",
+        image:"/Briztech-Final-Project/images/paste2.png",
     },
     {
         id:"15",
@@ -157,7 +157,7 @@ const data={
         price:290.00,
         price2:498.00,
         discount:"43%",
-        image:"images/mouthwash.png",
+        image:"/Briztech-Final-Project/images/mouthwash.png",
     },
     {
         id:"16",
@@ -167,7 +167,7 @@ const data={
         price:350.00,
         price2:567.00,
         discount:"39%",
-        image:"images/dant-manjan2.png",
+        image:"/Briztech-Final-Project/images/dant-manjan2.png",
     },
     {
         id:"17",
@@ -177,7 +177,7 @@ const data={
         price:269.00,
         price2:420.00,
         discount:"26%",
-        image:"images/paste1.png",
+        image:"/Briztech-Final-Project/images/paste1.png",
     },
     {
         id:"18",
@@ -186,7 +186,7 @@ const data={
         price:395.00,
         price2:529.00,
         discount:"26%",
-        image:"images/paste5.png",
+        image:"/Briztech-Final-Project/images/paste5.png",
     }
 ],productItems4:[
     {
@@ -197,7 +197,7 @@ const data={
         price:219.00, 
         price2:367.00,
         discount:"41%",
-        image:"images/ashwagandha.png",
+        image:"/Briztech-Final-Project/images/ashwagandha.png",
     },
     {
         id:"20",
@@ -207,7 +207,7 @@ const data={
         price:389.00,
         price2:595.00,
         discount:"35%",
-        image:"images/multi-vitamin.png",
+        image:"/Briztech-Final-Project/images/multi-vitamin.png",
     },
     {
         id:"21",
@@ -217,7 +217,7 @@ const data={
         price:479.00,
         price2:628.00,
         discount:"24%",
-        image:"images/giloy-powder.png",
+        image:"/Briztech-Final-Project/images/giloy-powder.png",
     },
     {
         id:"22",
@@ -227,7 +227,7 @@ const data={
         price:350.00,
         price2:567.00,
         discount:"39%",
-        image:"images/amla-powder.png",
+        image:"/Briztech-Final-Project/images/amla-powder.png",
     },
     {
         id:"23",
@@ -237,7 +237,7 @@ const data={
         price:269.00,
         price2:420.00,
         discount:"26%",
-        image:"images/immunity-capsule.png",
+        image:"/Briztech-Final-Project/images/immunity-capsule.png",
     },
     {
         id:"24",
@@ -246,7 +246,7 @@ const data={
         price:395.00,
         price2:529.00,
         discount:"26%",
-        image:"images/shilajit.png",
+        image:"/Briztech-Final-Project/images/shilajit.png",
     }
 ],productItems5:[
     {
@@ -257,7 +257,7 @@ const data={
         price:319.00, 
         price2:467.00,
         discount:"32%",
-        image:"images/amla-bhringa-shampoo.png",
+        image:"/Briztech-Final-Project/images/amla-bhringa-shampoo.png",
     },
     {
         id:"26",
@@ -267,7 +267,7 @@ const data={
         price:479.00,
         price2:628.00,
         discount:"24%",
-        image:"images/moringa-shampoo.png",
+        image:"/Briztech-Final-Project/images/moringa-shampoo.png",
     },
     {
         id:"27",
@@ -277,7 +277,7 @@ const data={
         price:679.00,
         price2:928.00,
         discount:"27%",
-        image:"images/Heena-Sikakai_shampoo.png",
+        image:"/Briztech-Final-Project/images/Heena-Sikakai_shampoo.png",
     },
     {
         id:"28",
@@ -287,7 +287,7 @@ const data={
         price:350.00,
         price2:567.00,
         discount:"39%",
-        image:"images/hibiscus-conditioner.png",
+        image:"/Briztech-Final-Project/images/hibiscus-conditioner.png",
     },
     {
         id:"29",
@@ -297,7 +297,7 @@ const data={
         price:269.00,
         price2:420.00,
         discount:"26%",
-        image:"images/tea-shampoo.png",
+        image:"/Briztech-Final-Project/images/tea-shampoo.png",
     },
     {
         id:"30",
@@ -306,7 +306,7 @@ const data={
         price:395.00,
         price2:529.00,
         discount:"26%",
-        image:"images/dry-shampoo.png",
+        image:"/Briztech-Final-Project/images/dry-shampoo.png",
     }
 ],productItems6:[
     {
@@ -317,7 +317,7 @@ const data={
         price:419.00, 
         price2:767.00,
         discount:"46%",
-        image:"images/vitaminc-cream.png",
+        image:"/Briztech-Final-Project/images/vitaminc-cream.png",
     },
     {
         id:"32",
@@ -327,7 +327,7 @@ const data={
         price:279.00,
         price2:528.00,
         discount:"47%",
-        image:"images/cold-cream.png",
+        image:"/Briztech-Final-Project/images/cold-cream.png",
     },
     {
         id:"33",
@@ -337,7 +337,7 @@ const data={
         price:378.00,
         price2:630.00,
         discount:"41%",
-        image:"images/multani-mitti.png",
+        image:"/Briztech-Final-Project/images/multani-mitti.png",
     },
     {
         id:"34",
@@ -347,7 +347,7 @@ const data={
         price:350.00,
         price2:567.00,
         discount:"39%",
-        image:"images/hibiscus-conditioner.png",
+        image:"/Briztech-Final-Project/images/hibiscus-conditioner.png",
     },
     {
         id:"35",
@@ -357,7 +357,7 @@ const data={
         price:269.00,
         price2:498.00,
         discount:"44%",
-        image:"images/rose-water.png",
+        image:"/Briztech-Final-Project/images/rose-water.png",
     },
     {
         id:"36",
@@ -366,7 +366,7 @@ const data={
         price:339.00,
         price2:529.00,
         discount:"26%",
-        image:"images/neempack.png",
+        image:"/Briztech-Final-Project/images/neempack.png",
     }
 ]
 

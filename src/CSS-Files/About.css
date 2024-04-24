@@ -35,7 +35,7 @@
     }
     .main-body-head h1{
         padding-top: 0.5rem;
-        background: url("/public/videos/smokenew.gif");
+        background: url("/build/videos/smokenew.gif");
         filter:blur(1);
         box-shadow: 0rem 0rem 1rem #000;
         background-clip:text;
