@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Briztech-Final-Project/static/css/main.042cfb2b.css",
-    "main.js": "/Briztech-Final-Project/static/js/main.f49f3088.js",
+    "main.css": "/Briztech-Final-Project/static/css/main.4943418e.css",
+    "main.js": "/Briztech-Final-Project/static/js/main.3446a795.js",
     "reactPlayerYouTube.js": "/Briztech-Final-Project/static/js/reactPlayerYouTube.e241decf.chunk.js",
     "reactPlayerSoundCloud.js": "/Briztech-Final-Project/static/js/reactPlayerSoundCloud.e217def4.chunk.js",
     "reactPlayerVimeo.js": "/Briztech-Final-Project/static/js/reactPlayerVimeo.1c3e63fe.chunk.js",
@@ -19,8 +19,8 @@
     "static/js/453.f291ff52.chunk.js": "/Briztech-Final-Project/static/js/453.f291ff52.chunk.js",
     "static/media/smokenew.gif": "/Briztech-Final-Project/static/media/smokenew.3e0aa5e2a45151ee2839.gif",
     "index.html": "/Briztech-Final-Project/index.html",
-    "main.042cfb2b.css.map": "/Briztech-Final-Project/static/css/main.042cfb2b.css.map",
-    "main.f49f3088.js.map": "/Briztech-Final-Project/static/js/main.f49f3088.js.map",
+    "main.4943418e.css.map": "/Briztech-Final-Project/static/css/main.4943418e.css.map",
+    "main.3446a795.js.map": "/Briztech-Final-Project/static/js/main.3446a795.js.map",
     "reactPlayerYouTube.e241decf.chunk.js.map": "/Briztech-Final-Project/static/js/reactPlayerYouTube.e241decf.chunk.js.map",
     "reactPlayerSoundCloud.e217def4.chunk.js.map": "/Briztech-Final-Project/static/js/reactPlayerSoundCloud.e217def4.chunk.js.map",
     "reactPlayerVimeo.1c3e63fe.chunk.js.map": "/Briztech-Final-Project/static/js/reactPlayerVimeo.1c3e63fe.chunk.js.map",
@@ -38,7 +38,7 @@
     "453.f291ff52.chunk.js.map": "/Briztech-Final-Project/static/js/453.f291ff52.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.042cfb2b.css",
-    "static/js/main.f49f3088.js"
+    "static/css/main.4943418e.css",
+    "static/js/main.3446a795.js"
   ]
 }
