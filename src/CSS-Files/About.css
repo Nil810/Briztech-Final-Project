@@ -124,6 +124,7 @@
     .team-section {
         height:24rem;
         margin-top: 5rem;
+        margin:5rem auto;
         display: flex;
         justify-content: space-between;
     }
@@ -137,7 +138,7 @@
         filter:drop-shadow( 0px 0px 1rem #16150e);
     }
     .team-member {
-        height: 20rem;
+        height: 100%;
         display: flex;
         text-align: center;
         background-color: #e2e2d9;

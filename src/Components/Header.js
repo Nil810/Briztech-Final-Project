@@ -101,7 +101,7 @@ const Header = ({cartItems}) => {
     
     </div>
     
-    <div className="prod-list" ref={productsRef} onMouseLeave={mouseLeave} >
+    <div className="prod-list" ref={productsRef} onMouseLeave={mouseLeave} onMouseOver={productsHover}>
         <div><Link to={"/soaps"} className="lists"><p>Soaps</p></Link><hr/></div>
         <div><Link to={"./dental"} className="lists"><p>Dental Care</p></Link><hr/></div>
         <div><Link to={"./shampoo"} className="lists"><p>Shampoo & Conditioner</p></Link><hr/></div>
@@ -110,7 +110,7 @@ const Header = ({cartItems}) => {
         <div><Link to={"./skin"} className="lists"><p>Skin Care</p></Link></div>
     </div>
     
-    <div className="more" ref={moreRef} onMouseLeave={mouseLeave}>
+    <div className="more" ref={moreRef} onMouseLeave={mouseLeave} onMouseOver={moreHover}>
         <div><a href="#vi" className="lists"><p>Videos</p></a><hr/></div>
         <div><Link to={"/blogs"} className="lists"><p>Blogs</p></Link><hr/></div>
         <div><Link to={"/cart"} className="lists"><p>Cart</p></Link><hr/></div>
@@ -127,9 +127,9 @@ const Header = ({cartItems}) => {
         <ul className="centernav">  
             <li ><Link to="/" className="nav-items">Home</Link> </li>
             <li><Link to="/about"  className="nav-items">About</Link></li>
-            <li className="li-prod" onMouseOver={productsHover} ><Link to="/products" className="nav-items">Products</Link></li>
+            <li className="li-prod" onMouseOver={productsHover} onMouseLeave={mouseLeave}><Link to="/products" className="nav-items">Products</Link></li>
             <li><Link to="/contact" className="nav-items">Contact Us</Link></li>
-            <li className="li-more" onMouseOver={moreHover}><a href className="nav-items">More</a></li>
+            <li className="li-more" onMouseOver={moreHover} onMouseLeave={mouseLeave}><a href className="nav-items">More</a></li>
         </ul>
         <div className="rightnav">
     

@@ -50,7 +50,7 @@ const ContactUs = () => {
             <input type="tel" name="Contact" class="contact" placeholder="Contact No.*" required/>
             <br/><br/><br/>
             <input type="email" name="Email" class="email" placeholder="Email Id*" required/><br/><br/><br/>
-            <textarea cols="54" rows="6" name="message" class="message" placeholder="Your Message*" required></textarea><br/><br/><br/><br/>
+            <textarea cols="55" rows="6" name="message" class="message" placeholder="Your Message*" required></textarea><br/><br/><br/><br/>
             
             <button type="submit" class="bn5">Submit</button>
            

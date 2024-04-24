@@ -24,6 +24,7 @@
       -webkit-text-fill-color:transparent;
       justify-content: center;
       text-align: center;
+      margin: auto;
       padding-top: 5rem;
       z-index: 3;
   }
@@ -165,8 +166,8 @@
       margin-left: 8rem;
   }
   form{
-      height:50rem;
-      width:59rem;
+      height:auto;
+      width:auto;
       margin-left:10rem;
       margin-top:4.5rem;
   }
