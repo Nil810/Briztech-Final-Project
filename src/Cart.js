@@ -21,6 +21,8 @@ const orderHandle = () =>{
  
   return (
         <div className="cart-outerdiv">
+          <a href="https://wa.me/918102774475" target=""><img src="/Briztech-Final-Project/images/chatbot.gif" alt="chatbot" className="chat-gif"/></a>
+     
             <div className="cart-items">
               <h2 className="cart-items-header fa-fade">Cart Items</h2>
               <div className="clear-cart">

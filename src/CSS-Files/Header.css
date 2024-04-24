@@ -1,3 +1,12 @@
+.chat-gif{
+    height:13rem;
+    width:13rem;
+    position:fixed;
+    top:54rem;;
+    right:0.5rem;
+    z-index:2;
+    filter:drop-shadow( 10px 10px 20px #2e2e03);
+}
 .float-cart{
     position:fixed;
     left:0;
