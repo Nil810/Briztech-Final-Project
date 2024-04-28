@@ -116,20 +116,15 @@ html{
 
 @media (min-width:1367px) and (max-width:1442px){
     html{
-        font-size: 68.5%;
+        font-size: 70%;
     }
 }
-    @media (min-width:1443px) and (max-width:1600px){
-        html{
-            font-size: 69.5%;
-        }
-    }
         
-@media (min-width:1601px) and (max-width:1930px){
+@media (min-width:1443px) and (max-width:1930px){
     html{
         font-size: 70.5%;
     }
-    
+
 }
 
 
