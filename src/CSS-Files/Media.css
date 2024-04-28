@@ -96,14 +96,14 @@ html{
 
 @media (min-width:750px) and (max-width:841px){
  html{
-    font-size:35%;
+    font-size:45%;
   }
 
  
 } 
 @media (min-width:842px) and (max-width:991px){
         html{
-            font-size: 40%;   
+            font-size: 50%;   
         }
        
         }
@@ -114,7 +114,18 @@ html{
        
         }
 
-@media (min-width:1367px) and (max-width:1930px){
+@media (min-width:1367px) and (max-width:1442px){
+    html{
+        font-size: 63.5%;
+    }
+}
+    @media (min-width:1443px) and (max-width:1600px){
+        html{
+            font-size: 65.5%;
+        }
+    }
+        
+@media (min-width:1601px) and (max-width:1930px){
     html{
         font-size: 70.5%;
     }

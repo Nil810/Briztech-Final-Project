@@ -108,8 +108,5 @@ const App = () => {
   </HashRouter>
   );
 };
-// "homepage": "https://Nil810.github.io/Briztech-Final-Project/#/",
-// "predeploy": "npm run build",
-// "deploy": "gh-pages -b master -d build"
 
 export default App;
