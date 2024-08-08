@@ -24,6 +24,8 @@ const newSchema=new mongoose.Schema({
 
 const collection=new mongoose.model("collection",newSchema);
 
-
-
 module.exports=collection;
+
+
+
+

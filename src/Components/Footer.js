@@ -3,6 +3,9 @@ import '../CSS-Files/Footer.css';
 import {Link} from "react-router-dom";
 
 const Footer = () => {
+    const scrollToTop =()=>{
+        window.scrollTo(0,0);
+    }
   return (
     
       <div className="footer" id="fo">
@@ -12,28 +15,28 @@ const Footer = () => {
 
 <h5 className="li-useful"><b><u>USEFUL LINKS</u></b></h5>
 <ul className="list1">
+<Link to={"/about"}><li onClick={scrollToTop}>ABOUT US</li></Link> 
     <li>PRIVACY POLICIES</li>
-    <Link to={"/products"}><li>HERBAL PRODUCTS</li></Link>
-   <Link to={"/about"}><li>ABOUT US</li></Link> 
-   <a href="#vi"><li>VIDEOS</li></a> 
-    <Link to={"/"}><li>MORE</li></Link>
+    <li>TERMS OF SERVICE</li>
+    <li>SHIPPING</li>
+    <li>PAYMENTS</li>
+    
 </ul>
 <ul className="list2">
    <br/>
-   <a href="#te"><li>TESTIMONIALS</li></a>
-   <Link to={"/products"}><li>PRODUCTS</li></Link>
-   <a href> <li>GALLERY</li></a>
-   <Link to={"/"}><li>HOME</li></Link>
-   <Link to={"/cart"}><li>CART</li></Link>
+   <Link to={"/products"} ><li onClick={scrollToTop}>PRODUCTS</li></Link>
+   <Link to={"/blogs"}><li onClick={scrollToTop}>BLOGS</li></Link>
+   <Link to={"/cart"}><li onClick={scrollToTop}>CART</li></Link>
+   <Link to={"/"}><li onClick={scrollToTop}>HOME</li></Link>
+   <Link to={"/"}><li onClick={scrollToTop}>MORE</li></Link>
 </ul>
 
 <div className="footer-contact">
     <h5><b><u>CONTACT</u></b></h5><br/>
-<p>829144,Main Road Phusro, Bermo,<br/> Bokaro, Jharkhand, India</p>
+<p>829144,Main Road Phusro, Bermo,<br/>Bokaro, Jharkhand, India</p>
 <p> yourherbs810@gmail.com<br/>
     +91-8102774475<br/>
-    +91-9608974461<br/>
-    +91-7079627075
+    +91-9608974461
    </p>
     </div>
 
@@ -50,7 +53,7 @@ const Footer = () => {
   </div>
 
   </div>
-<p className="copy">&copy;Copyright 2024-2025. Your Herbs. All Rights Reserved.</p>
+<p className="copy">&copy;Copyright 2024-2025. Your Herbs | All Rights Reserved.</p>
 
 </div>
  );

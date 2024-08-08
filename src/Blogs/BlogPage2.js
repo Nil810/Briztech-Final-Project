@@ -2,6 +2,11 @@ import '../CSS-Files/Blogs.css';
 import {Link} from "react-router-dom";
 
 const BlogPage2 = () => {
+
+    const scrollToTop =()=>{
+        window.scrollTo(0,0);
+    }
+
   return (
     
     <div className="blogs-read-page2">
@@ -183,8 +188,8 @@ const BlogPage2 = () => {
     </div>
     
     </div>
-    <Link to="/blogs" className="recent">Recent Posts</Link>
-<Link to="/blogs" className="see-all">See All</Link>
+    <Link to="/blogs" className="recent" onClick={scrollToTop}>Recent Posts</Link>
+<Link to="/blogs" className="see-all" onClick={scrollToTop}>See All</Link>
      </div>
 
   );

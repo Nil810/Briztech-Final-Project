@@ -89,12 +89,19 @@ const Header = ({cartItems}) => {
     <div className="lastheader">
     
         <span className="track">
-            <i className="fa-sharp fa-solid fa-truck"></i>&nbsp;<a href="https://ekartlogistics.com/">Track Order</a>
+           <a href="https://ekartlogistics.com/">Track Order</a>&nbsp;&nbsp;
+            <i className="fa-sharp fa-solid fa-truck fa-beat-fade"></i>
             </span>
        
            <span className="sign">
-                <i className="fa-sharp fa-solid fa-user-secret fa-beat-fade" ></i> &nbsp;
-            <Link to={"/login"} className="log-sign">Log In|Sign Up</Link>
+           
+            <Link to={"/login"} className="log-sign">
+            <span className="user-in">Log In|Sign Up</span>
+             </Link>&nbsp;
+
+            <span className="user-out">Log Out</span>
+
+            <i class="fa-solid fa-circle-user log-user"></i>
            </span> 
         
     </div>

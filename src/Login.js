@@ -6,6 +6,7 @@ import './CSS-Files/Home.css';
 import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const Login = () => {
 
   const history = useNavigate();
@@ -13,6 +14,7 @@ const Login = () => {
   const[email,setEmail]=useState('')
   const[password,setPassword]=useState('')
 
+  
   async function submit(e){
     e.preventDefault();
 
@@ -44,6 +46,8 @@ const Login = () => {
     }
 
   }
+
+
   return (
   <>
     <a href="https://wa.me/918102774475"><img src="/Briztech-Final-Project/images/chatbot.gif" className="chat-gif" alt="chatbot"/></a>

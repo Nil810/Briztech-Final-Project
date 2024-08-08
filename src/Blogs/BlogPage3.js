@@ -2,6 +2,11 @@ import '../CSS-Files/Blogs.css';
 import {Link} from "react-router-dom";
 
 const BlogPage3 = () => {
+
+    const scrollToTop =()=>{
+        window.scrollTo(0,0);
+    }
+
   return (
 
     <div className="blogs-read-page3">
@@ -185,8 +190,8 @@ Keep in mind that, like conventional drugs, herbal remedies may interact negativ
 </div>
 
 </div>
-<Link to="/blogs" className="recent">Recent Posts</Link>
-<Link to="/blogs" className="see-all">See All</Link>
+<Link to="/blogs" className="recent" onClick={scrollToTop}>Recent Posts</Link>
+<Link to="/blogs" className="see-all" onClick={scrollToTop}>See All</Link>
 </div>
 
   );

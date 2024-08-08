@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import GoToTop from './Components/GoToTop';
 import Home from './Components/Home';
 import About from './Components/About';
 import Products from './Products';
@@ -24,6 +25,8 @@ import Cart from './Cart';
 import{HashRouter, Routes, Route} from 'react-router-dom';
 
 const App = () => {
+
+
   const {productItems} = data;
   const {productItems2} = data;
   const{productItems3} = data;
@@ -68,21 +71,8 @@ const App = () => {
 
     <Header cartItems={cartItems}/>
 
-    {/* <ProductsRoutes
-        productItems={productItems} 
-        productItems2={productItems2}
-        productItems3={productItems3}
-        productItems4={productItems4}
-        productItems5={productItems5}
-        productItems6={productItems6}
-        cartItems={cartItems} 
-        setCartItems={setCartItems} 
-        handleAddProduct={handleAddProduct}
-        handleRemoveProduct={handleRemoveProduct}
-        handleCartClear={handleCartClear}
-        /> */}
+    <Routes> 
 
-    <Routes>  
         <Route>
             <Route path="/" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
@@ -101,9 +91,11 @@ const App = () => {
         <Route path="/shampoo" element={<Shampoo productItems5={productItems5} handleAddProduct={handleAddProduct}/>}/>
         <Route path="/skin" element={<Skin productItems6={productItems6} handleAddProduct={handleAddProduct}/>}/>
         <Route path="/cart" element={<Cart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct={handleRemoveProduct} handleCartClear={handleCartClear}/>}/>
-
+       
          </Route>
+        
     </Routes>
+    <GoToTop/> 
     <Footer/>
   </HashRouter>
   );

@@ -182,6 +182,12 @@
     margin-left: 56rem;
     display: flex;
 }
+.user-out{
+    display: none;
+}
+.track{
+    padding-top: 0.4rem;
+}
 
 .sign{
     margin-left: 2.5rem;
@@ -190,6 +196,9 @@
 .sign a , .track a{
     text-decoration: none;
     color:white;
+}
+.log-user{
+    font-size: 2rem;
 }
 .navbar{
     display: flex;

@@ -8,6 +8,11 @@ import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Home = () => {
+
+    const scrollToTop =()=>{
+        window.scrollTo(0,0);
+    }
+
    const mailinput = useRef();
    
    const subscribe = () => {
@@ -39,7 +44,7 @@ const Home = () => {
     <p className="img1-para">With our wide variety of Herbal Products that will boost your immune system and healthy lifestyle.<br/>
         So don't think more and join us for a glorious healthy future.... 😊😊 </p>
 
-        <Link to={"/products"}><button className="read-more fa-fade fa-beat"><i className="fa-sharp fa-solid fa-lock"></i>&nbsp;Order Now</button></Link>
+        <Link to={"/products"}><button className="read-more fa-fade fa-beat" onClick={scrollToTop}><i className="fa-sharp fa-solid fa-lock"></i>&nbsp;Order Now</button></Link>
 
   </div>
 
@@ -67,7 +72,7 @@ const Home = () => {
         Our approach is to <i><b>preserve,protect</b></i> and <i><b>nourish</b></i>, creating long-lasting beauty and health that starts from within.<br/><br/>Shop our products having goodness of natural herbs and get your health in your control....
     </p>
 
-    <center><Link to={"/about"}><button className="ab-btn fa-beat">About Us</button></Link></center>
+    <center><Link to={"/about"}><button className="ab-btn fa-beat" onClick={scrollToTop}>About Us</button></Link></center>
    
 
 </div>
@@ -79,7 +84,7 @@ const Home = () => {
   <div className="products">
    
     <Link to="/soaps">
-        <div className="prod-inner-div">
+        <div className="prod-inner-div" onClick={scrollToTop}>
             <img src="/Briztech-Final-Project/images/soapsample1.png" alt="soap"/>
                 <h3 className="prod-inner-cont">Soaps</h3>
            
@@ -87,14 +92,14 @@ const Home = () => {
     </Link>
 
     <Link to={"/dental"}>
-        <div className="prod-inner-div">
+        <div className="prod-inner-div" onClick={scrollToTop}>
             <img src="/Briztech-Final-Project/images/pasteimg.png" alt="toothpaste"/>
             <h3 className="prod-inner-cont">Dental Care</h3>
         </div>
     
     </Link>
     <Link to={"/shampoo"}>
-        <div className="prod-inner-div">
+        <div className="prod-inner-div" onClick={scrollToTop}>
             <img src="/Briztech-Final-Project/images/shampoo.png" alt="shampoo" className="shampoo-sample-img"/>
             <h3 className="prod-inner-cont">Shampoo /<br/>Conditioner</h3>
         </div>
@@ -106,7 +111,7 @@ const Home = () => {
   <div className="products">
 
     <Link to={"/oil"}>
-    <div className="prod-inner-div">
+    <div className="prod-inner-div" onClick={scrollToTop}>
        
          <img src="/Briztech-Final-Project/images/oilsample.png" alt="oil"/>
         <h3 className="prod-inner-cont">Hair Oil</h3>
@@ -114,14 +119,14 @@ const Home = () => {
     </Link>
 
     <Link to={"/health"}>
-        <div className="prod-inner-div">   
+        <div className="prod-inner-div" onClick={scrollToTop}>   
             <img src="/Briztech-Final-Project/images/heathcare.png" alt="health drink"/>
             <h3 className="prod-inner-cont">Health Care</h3>
         </div>
     </Link>
    
     <Link to={"/skin"}>
-        <div className="prod-inner-div">
+        <div className="prod-inner-div" onClick={scrollToTop}>
             <img src="/Briztech-Final-Project/images/creamsample.png" alt="Skin care"/>
             <h3 className="prod-inner-cont">Skin Care</h3>
        </div>
@@ -136,7 +141,7 @@ const Home = () => {
     <h1 className="blogs-head fa-fade"><b>Recent Posts</b></h1><br/>
      
     <Link to="/blogpage1">
-      <div className="blogs">
+      <div className="blogs" onClick={scrollToTop}>
         <img src="/Briztech-Final-Project/images/blogpic1.jpg" alt=""/>
 
           <div className="inner-blog">
@@ -159,7 +164,7 @@ const Home = () => {
       </Link>
 
     <Link to="/blogpage2">
-      <div className="blogs">
+      <div className="blogs" onClick={scrollToTop}>
         <img src="/Briztech-Final-Project/images/blogpic2.jpg" alt=""/>
 
         <div className="inner-blog">
@@ -183,7 +188,7 @@ const Home = () => {
     </Link>
 
     <Link to="/blogpage3">
-     <div className="blogs">
+     <div className="blogs" onClick={scrollToTop}>
         <img src="/Briztech-Final-Project/images/blogpic3.jpg" alt=""/>
 
         <div className="inner-blog">
@@ -206,7 +211,7 @@ const Home = () => {
      </div>
     </Link>
 
-   <Link to="/blogs"><div className=" blog-btn"><button className="bn4">Show More</button></div></Link> 
+   <Link to="/blogs"><div className=" blog-btn" onClick={scrollToTop}><button className="bn4">Show More</button></div></Link> 
 
 </div>
 
@@ -256,6 +261,7 @@ const Home = () => {
 <ToastContainer className={"toast-home"}/>
 
 </div>
+
 
 </>
  );

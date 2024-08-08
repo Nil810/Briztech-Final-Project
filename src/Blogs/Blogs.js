@@ -2,21 +2,26 @@ import {Link} from "react-router-dom";
 import '../CSS-Files/Blogs.css';
 
 const Blogs = () => {
+
+  const scrollToTop =()=>{
+    window.scrollTo(0,0);
+}
+
   return (
 <div class="blog-main">
 
-<a href="https://wa.me/918102774475" target=""><img src="images/chatbot.gif" alt="chatbot" className="chat-gif"/></a>
+<a href="https://wa.me/918102774475" target=""><img src="/Briztech-Final-Project/images/chatbot.gif" alt="chatbot" className="chat-gif"/></a>
 
 <h1 class="blogs-head fa-fade"><b>Recent Posts</b></h1><br/>
  
 <Link to="/blogpage1">
-  <div class="blogs">
-    <img src="images/blogpic1.jpg" alt=""/>
+  <div class="blogs" onClick={scrollToTop}>
+    <img src="/Briztech-Final-Project/images/blogpic1.jpg" alt=""/>
 
       <div class="inner-blog">
     
         <div class="admin-div">
-            <img src="images/Nileshimg.jpg" alt=""/>
+            <img src="/Briztech-Final-Project/images/Nileshimg.jpg" alt=""/>
             <p class="admin">Admin<br/>March 11,2024</p>
         </div><br/><br/>
         <h3>Top 8 Herbs and Spices with Powerful Health benefits</h3><br/>
@@ -33,13 +38,13 @@ const Blogs = () => {
   </Link>
 
 <Link to="/blogpage2">
-  <div class="blogs">
-    <img src="images/blogpic2.jpg" alt=""/>
+  <div class="blogs" onClick={scrollToTop}>
+    <img src="/Briztech-Final-Project/images/blogpic2.jpg" alt=""/>
 
     <div class="inner-blog">
     
         <div class="admin-div">
-            <img src="images/Nileshimg.jpg" alt=""/>
+            <img src="/Briztech-Final-Project/images/Nileshimg.jpg" alt=""/>
             <p class="admin">Admin<br/>March 24,2024</p>
         </div><br/><br/>
         <h3>Natural Ayurvedic Herbs for Health Lifestyle</h3><br/>
@@ -57,13 +62,13 @@ const Blogs = () => {
 </Link>
 
 <Link to="/blogpage3">
- <div class="blogs">
-    <img src="images/blogpic3.jpg" alt=""/>
+ <div class="blogs" onClick={scrollToTop}>
+    <img src="/Briztech-Final-Project/images/blogpic3.jpg" alt=""/>
 
     <div class="inner-blog">
     
         <div class="admin-div">
-            <img src="images/Nileshimg.jpg" alt=""/>
+            <img src="/Briztech-Final-Project/images/Nileshimg.jpg" alt=""/>
             <p class="admin">Admin<br/>March 11,2024</p>
         </div><br/><br/>
         <h3>World's Most Popular and Effective Herbal Medicines </h3><br/>

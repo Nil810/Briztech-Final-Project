@@ -4,19 +4,30 @@ import { useRef } from 'react';
 import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// import React, { useState } from 'react';
+// import axios from 'axios';
+
+
 const Cart = ({cartItems, handleAddProduct , handleRemoveProduct, handleCartClear}) => {
+
 
 let totalPrice = cartItems.reduce((price, item) => price + item.price * item.quantity, 0);
 
+// const [orderPlaced, setOrderPlaced] = useState(false);
+
 const orderSuccess=useRef();
 
-const orderHandle = () =>{
+const scrollToTop = ()=>{
+  window.scrollTo(0,0);
+}
+
+const orderHandle = async () =>{
     toast("Order Successful. It will reach you in 3-4 working days!");
     setTimeout(() =>{
       toast("Thank You for Order! 😊");
     },3000);
   
-    }
+    };
 
  
   return (
@@ -76,7 +87,8 @@ const orderHandle = () =>{
                   </div>
                 </div>
                
-                <button class="bn4 odr-btn" ref={orderSuccess} onClick={orderHandle} onMouseUp={handleCartClear}>Buy Now</button><br/>
+                <button class="bn4 odr-btn" ref={orderSuccess} onClick={function(event){orderHandle(); scrollToTop(); handleCartClear()}}>Buy Now</button>
+                {/* <br/>{orderPlaced && <p><b>Order placed successfully!</b></p>}<br/> */}
                 <ToastContainer className={"toast-cart"}/>
             </div>
             
