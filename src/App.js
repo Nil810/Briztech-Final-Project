@@ -26,7 +26,7 @@ import{HashRouter, Routes, Route} from 'react-router-dom';
 
 const App = () => {
 
-
+//For cart
   const {productItems} = data;
   const {productItems2} = data;
   const{productItems3} = data;
@@ -83,7 +83,7 @@ const App = () => {
             <Route path="/blogpage2" element={<BlogPage2/>}/>
             <Route path="/blogpage3" element={<BlogPage3/>}/>        
             <Route path="/signup" element={<Signup/>}/>
-            <Route path="/login" element={<Login/>}/>
+            <Route path="/login" element={<Login/>} />
             <Route path="/soaps" element={<Soaps productItems={productItems} handleAddProduct={handleAddProduct}/>}/>
         <Route path="/oil" element={<Oil productItems2={productItems2} handleAddProduct={handleAddProduct}/>}/>
         <Route path="/dental" element={<Dental productItems3={productItems3} handleAddProduct={handleAddProduct}/>}/>

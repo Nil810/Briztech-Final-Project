@@ -5,6 +5,7 @@ import axios from "axios";
 import './CSS-Files/Home.css';
 import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Header from './Components/Header';
 
 
 const Login = () => {
@@ -26,7 +27,7 @@ const Login = () => {
         .then(res=>{
           if(res.data==="Already exist"){
             toast("Login Successful! 😊");
-            history("/")
+            history("/"); //Redirect to homepage
           }
          
           else if(res.data==="Not exist"){
@@ -50,6 +51,7 @@ const Login = () => {
 
   return (
   <>
+    <Header />
     <a href="https://wa.me/918102774475"><img src="/Briztech-Final-Project/images/chatbot.gif" className="chat-gif" alt="chatbot"/></a>
 
     <div className="login-outer">
@@ -67,7 +69,8 @@ const Login = () => {
         <br/>
         <input type="password" onChange={(e)=>{setPassword(e.target.value)}} className="password" placeholder="Password" required/><i className="fas fa-lock"></i>
         <p className="drop"></p><br/>
-        <button className="login-btn" onClick={submit}>Login</button><br/>
+
+        <button className="login-btn" onClick={submit()}>Login</button><br/>
        
 
         <p className="forget">Forgot Password? <a href>Click Here</a></p><br/>

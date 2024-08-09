@@ -4,6 +4,11 @@ import React, {useRef} from 'react';
 
 const Header = ({cartItems}) => {
 
+    
+    const scrollToTop =()=>{
+        window.scrollTo(0,0);
+    }
+
     const productsRef=useRef();
     const moreRef=useRef();
     const cartRef=useRef();
@@ -94,14 +99,17 @@ const Header = ({cartItems}) => {
             </span>
        
            <span className="sign">
-           
-            <Link to={"/login"} className="log-sign">
-            <span className="user-in">Log In|Sign Up</span>
-             </Link>&nbsp;
 
-            <span className="user-out">Log Out</span>
+           <span className="user-out">
+            Log Out
+            </span>
+
+            <Link to={"/login"} className="log-sign">
+            <span className="user-in" onClick={scrollToTop}>Log In|Sign Up&nbsp;</span>
+             </Link>     
 
             <i class="fa-solid fa-circle-user log-user"></i>
+         
            </span> 
         
     </div>
@@ -109,20 +117,20 @@ const Header = ({cartItems}) => {
     </div>
     
     <div className="prod-list" ref={productsRef} onMouseLeave={mouseLeave} onMouseOver={productsHover}>
-        <div><Link to={"/soaps"} className="lists"><p>Soaps</p></Link><hr/></div>
-        <div><Link to={"./dental"} className="lists"><p>Dental Care</p></Link><hr/></div>
-        <div><Link to={"./shampoo"} className="lists"><p>Shampoo & Conditioner</p></Link><hr/></div>
-        <div><Link to={"./oil"} className="lists"><p>Hair Oil</p></Link><hr/></div>
-        <div><Link to={"./health"} className="lists"><p>Health Care</p></Link><hr/></div>
-        <div><Link to={"./skin"} className="lists"><p>Skin Care</p></Link></div>
+        <div onClick={scrollToTop}><Link to={"/soaps"} className="lists"><p>Soaps</p></Link><hr/></div>
+        <div onClick={scrollToTop}><Link to={"./dental"} className="lists"><p>Dental Care</p></Link><hr/></div>
+        <div onClick={scrollToTop}><Link to={"./shampoo"} className="lists"><p>Shampoo & Conditioner</p></Link><hr/></div>
+        <div onClick={scrollToTop}><Link to={"./oil"} className="lists"><p>Hair Oil</p></Link><hr/></div>
+        <div onClick={scrollToTop}><Link to={"./health"} className="lists"><p>Health Care</p></Link><hr/></div>
+        <div onClick={scrollToTop}><Link to={"./skin"} className="lists"><p>Skin Care</p></Link></div>
     </div>
     
     <div className="more" ref={moreRef} onMouseLeave={mouseLeave} onMouseOver={moreHover}>
         <div><a href="#vi" className="lists"><p>Videos</p></a><hr/></div>
-        <div><Link to={"/blogs"} className="lists"><p>Blogs</p></Link><hr/></div>
-        <div><Link to={"/cart"} className="lists"><p>Cart</p></Link><hr/></div>
-        <div><Link to={"/about"} className="lists"><p>Our Vision</p></Link><hr/></div>
-        <div><a href="#fo" className="lists"><p>Location</p></a></div>
+        <div onClick={scrollToTop}><Link to={"/blogs"} className="lists"><p>Blogs</p></Link><hr/></div>
+        <div onClick={scrollToTop}><Link to={"/cart"} className="lists"><p>Cart</p></Link><hr/></div>
+        <div onClick={scrollToTop}><Link to={"/about"} className="lists"><p>Our Vision</p></Link><hr/></div>
+        <div onClick={scrollToTop}><a href="#fo" className="lists"><p>Location</p></a></div>
     </div>
     
     <div className="navbar">
@@ -132,10 +140,10 @@ const Header = ({cartItems}) => {
         </div>
     
         <ul className="centernav">  
-            <li ><Link to="/" className="nav-items">Home</Link> </li>
-            <li><Link to="/about"  className="nav-items">About</Link></li>
-            <li className="li-prod" onMouseOver={productsHover} onMouseLeave={mouseLeave}><Link to="/products" className="nav-items">Products</Link></li>
-            <li><Link to="/contact" className="nav-items">Contact Us</Link></li>
+            <li onClick={scrollToTop}><Link to="/" className="nav-items">Home</Link> </li>
+            <li onClick={scrollToTop}><Link to="/about"  className="nav-items">About</Link></li>
+            <li className="li-prod" onClick={scrollToTop} onMouseOver={productsHover} onMouseLeave={mouseLeave}><Link to="/products" className="nav-items">Products</Link></li>
+            <li onClick={scrollToTop}><Link to="/contact" className="nav-items">Contact Us</Link></li>
             <li className="li-more" onMouseOver={moreHover} onMouseLeave={mouseLeave}><a href className="nav-items">More</a></li>
         </ul>
         <div className="rightnav">
@@ -148,7 +156,7 @@ const Header = ({cartItems}) => {
             
                <Link to={"/cart"}>
 
-                <div >
+                <div onClick={scrollToTop}>
                     <i className="fa-sharp fa-solid fa-cart-plus cart iframe-link fa-fade" style={{color: "#d4b02e"}}  ></i>
 
                     <span className="cart-length">
@@ -163,7 +171,6 @@ const Header = ({cartItems}) => {
         </div>
         
     </div>
-    
 </div>
   
   
