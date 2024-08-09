@@ -5,14 +5,13 @@ import axios from "axios";
 import './CSS-Files/Home.css';
 import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Header from './Components/Header';
 
 
 const Login = () => {
 
   const history = useNavigate();
 
-  const[email,setEmail]=useState('')
+  const[email,setEmail]= useState('')
   const[password,setPassword]=useState('')
 
   
@@ -27,10 +26,10 @@ const Login = () => {
         .then(res=>{
           if(res.data==="Already exist"){
             toast("Login Successful! 😊");
-            history("/"); //Redirect to homepage
+            history("/") //Redirect to homepage
           }
          
-          else if(res.data==="Not exist"){
+          else if(res.data=== "Not exist"){
   
             toast("Invalid username or password. Please sign up! ");
           }
@@ -51,7 +50,6 @@ const Login = () => {
 
   return (
   <>
-    <Header />
     <a href="https://wa.me/918102774475"><img src="/Briztech-Final-Project/images/chatbot.gif" className="chat-gif" alt="chatbot"/></a>
 
     <div className="login-outer">
@@ -70,7 +68,7 @@ const Login = () => {
         <input type="password" onChange={(e)=>{setPassword(e.target.value)}} className="password" placeholder="Password" required/><i className="fas fa-lock"></i>
         <p className="drop"></p><br/>
 
-        <button className="login-btn" onClick={submit()}>Login</button><br/>
+        <button className="login-btn" onClick={submit}>Login</button><br/>
        
 
         <p className="forget">Forgot Password? <a href>Click Here</a></p><br/>

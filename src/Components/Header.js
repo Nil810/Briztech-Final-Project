@@ -3,15 +3,15 @@ import{Link} from "react-router-dom";
 import React, {useRef} from 'react';
 
 const Header = ({cartItems}) => {
-
     
-    const scrollToTop =()=>{
-        window.scrollTo(0,0);
-    }
 
     const productsRef=useRef();
     const moreRef=useRef();
     const cartRef=useRef();
+
+    const scrollToTop =()=>{
+        window.scrollTo(0,0);
+    }
 
     const productsHover = () => {
        
@@ -56,12 +56,12 @@ const Header = ({cartItems}) => {
                 </button><br/>
             <h2>YOUR CART IS EMPTY!</h2><br/>
             <p>Not Sure Where To Start?<br/><br/><b><u>Try Our Collections:</u></b></p><br/><br/>
-            <Link to={"./soaps"}><button class="list-btn" >SOAPS</button></Link><br/><br/>
-            <Link to={"./dental"}><button class="list-btn" > DENTAL CARE</button></Link><br/><br/><br/>
-            <Link to={"./shampoo"}><button class="list-btn" >SHAMPOO & CONDITIONER</button></Link><br/><br/><br/>
-            <Link to={"./oil"}><button class="list-btn">HAIR OIL</button></Link><br/><br/><br/>
-            <Link to={"./health"}><button class="list-btn" >HEALTH CARE</button></Link><br/><br/><br/>
-            <Link to={"./skin"}><button class="list-btn" >SKIN CARE</button></Link><br/><br/><br/><br/>
+            <Link to={"./soaps"}><button class="list-btn" onClick={scrollToTop} >SOAPS</button></Link><br/><br/>
+            <Link to={"./dental"}><button class="list-btn" onClick={scrollToTop} > DENTAL CARE</button></Link><br/><br/><br/>
+            <Link to={"./shampoo"}><button class="list-btn" onClick={scrollToTop} >SHAMPOO & CONDITIONER</button></Link><br/><br/><br/>
+            <Link to={"./oil"}><button class="list-btn" onClick={scrollToTop}>HAIR OIL</button></Link><br/><br/><br/>
+            <Link to={"./health"}><button class="list-btn" onClick={scrollToTop} >HEALTH CARE</button></Link><br/><br/><br/>
+            <Link to={"./skin"}><button class="list-btn" onClick={scrollToTop}>SKIN CARE</button></Link><br/><br/><br/><br/>
             <Link to={"/products"} class="bn4 cart-order-btn">Order Now</Link><br/><br/>
 
             <div class="secure">
@@ -105,7 +105,7 @@ const Header = ({cartItems}) => {
             </span>
 
             <Link to={"/login"} className="log-sign">
-            <span className="user-in" onClick={scrollToTop}>Log In|Sign Up&nbsp;</span>
+            <span className="user-in" onMouseUp={scrollToTop}>Log In|Sign Up&nbsp;</span>
              </Link>     
 
             <i class="fa-solid fa-circle-user log-user"></i>
@@ -126,7 +126,7 @@ const Header = ({cartItems}) => {
     </div>
     
     <div className="more" ref={moreRef} onMouseLeave={mouseLeave} onMouseOver={moreHover}>
-        <div><a href="#vi" className="lists"><p>Videos</p></a><hr/></div>
+        <div onClick={scrollToTop}><Link to={"/"} className="lists"><p>Videos</p></Link><hr/></div>
         <div onClick={scrollToTop}><Link to={"/blogs"} className="lists"><p>Blogs</p></Link><hr/></div>
         <div onClick={scrollToTop}><Link to={"/cart"} className="lists"><p>Cart</p></Link><hr/></div>
         <div onClick={scrollToTop}><Link to={"/about"} className="lists"><p>Our Vision</p></Link><hr/></div>
@@ -140,7 +140,7 @@ const Header = ({cartItems}) => {
         </div>
     
         <ul className="centernav">  
-            <li onClick={scrollToTop}><Link to="/" className="nav-items">Home</Link> </li>
+            <li onClick={scrollToTop} ><Link to="/" className="nav-items">Home</Link> </li>
             <li onClick={scrollToTop}><Link to="/about"  className="nav-items">About</Link></li>
             <li className="li-prod" onClick={scrollToTop} onMouseOver={productsHover} onMouseLeave={mouseLeave}><Link to="/products" className="nav-items">Products</Link></li>
             <li onClick={scrollToTop}><Link to="/contact" className="nav-items">Contact Us</Link></li>
@@ -156,9 +156,9 @@ const Header = ({cartItems}) => {
             
                <Link to={"/cart"}>
 
-                <div onClick={scrollToTop}>
+                <div>
                     <i className="fa-sharp fa-solid fa-cart-plus cart iframe-link fa-fade" style={{color: "#d4b02e"}}  ></i>
-
+                
                     <span className="cart-length">
                         {cartItems.length===0 ? "0" : cartItems.length}
                         </span>
