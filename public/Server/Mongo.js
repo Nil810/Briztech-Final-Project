@@ -1,30 +1,30 @@
-const mongoose=require("mongoose");
+// const mongoose=require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/mydata");
+// mongoose.connect("mongodb://localhost:27017/Users");
 
-try{
+// try{
 
-    console.log("connected");
-}
+//     console.log("connected");
+// }
 
-catch(e){
-    console.error(e);
-}
+// catch(e){
+//     console.error(e);
+// }
 
-const newSchema=new mongoose.Schema({
-    email:{
-        type:String,
-        required:true
-    },
-    password:{
-        type:String,
-        required:true
-    }
-})
+// const newSchema=new mongoose.Schema({
+//     email:{
+//         type:String,
+//         required:true
+//     },
+//     password:{
+//         type:String,
+//         required:true
+//     }
+// })
 
-const collection=new mongoose.model("collection",newSchema);
+// const collection=new mongoose.model("collection",newSchema);
 
-module.exports=collection;
+// module.exports=collection;
 
 
 

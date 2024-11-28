@@ -11,8 +11,9 @@ import BlogPage1 from './Blogs/BlogPage1';
 import BlogPage2 from './Blogs/BlogPage2';
 import BlogPage3 from './Blogs/BlogPage3';
 import Login from './Login';
-import Signup from './Signup';
+import SignUp from './SignUp';
 import data from './Products/Data';
+import PrivateComponent from './Components/PrivateComponent';
 
 import Cart from './Cart';
  import Soaps from './Products/Soaps';
@@ -70,30 +71,28 @@ const App = () => {
   <HashRouter>
 
     <Header cartItems={cartItems}/>
-
     <Routes> 
-
-        <Route>
-            <Route path="/" element={<Home/>}/>
+           
+            <Route element={<PrivateComponent/>}>
             <Route path="/about" element={<About/>}/>
             <Route path="/products" element={<Products/>}/>
             <Route path="/contact" element={<ContactUs/>}/>
             <Route path="/blogs" element={<Blogs/>}/>
             <Route path="/blogpage1" element={<BlogPage1/>}/>
             <Route path="/blogpage2" element={<BlogPage2/>}/>
-            <Route path="/blogpage3" element={<BlogPage3/>}/>        
-            <Route path="/signup" element={<Signup/>}/>
-            <Route path="/login" element={<Login/>} />
+            <Route path="/blogpage3" element={<BlogPage3/>}/>                    
             <Route path="/soaps" element={<Soaps productItems={productItems} handleAddProduct={handleAddProduct}/>}/>
-        <Route path="/oil" element={<Oil productItems2={productItems2} handleAddProduct={handleAddProduct}/>}/>
-        <Route path="/dental" element={<Dental productItems3={productItems3} handleAddProduct={handleAddProduct}/>}/>
-        <Route path="/health" element={<Health productItems4={productItems4} handleAddProduct={handleAddProduct}/>}/>
-        <Route path="/shampoo" element={<Shampoo productItems5={productItems5} handleAddProduct={handleAddProduct}/>}/>
-        <Route path="/skin" element={<Skin productItems6={productItems6} handleAddProduct={handleAddProduct}/>}/>
-        <Route path="/cart" element={<Cart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct={handleRemoveProduct} handleCartClear={handleCartClear}/>}/>
-       
-         </Route>
-        
+            <Route path="/oil" element={<Oil productItems2={productItems2} handleAddProduct={handleAddProduct}/>}/>
+            <Route path="/dental" element={<Dental productItems3={productItems3} handleAddProduct={handleAddProduct}/>}/>
+            <Route path="/health" element={<Health productItems4={productItems4} handleAddProduct={handleAddProduct}/>}/>
+            <Route path="/shampoo" element={<Shampoo productItems5={productItems5} handleAddProduct={handleAddProduct}/>}/>
+            <Route path="/skin" element={<Skin productItems6={productItems6} handleAddProduct={handleAddProduct}/>}/>
+            <Route path="/cart" element={<Cart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct={handleRemoveProduct} handleCartClear={handleCartClear}/>}/>
+            </Route>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/signup" element={<SignUp/>}/>
+            <Route path="/login" element={<Login/>} />
+               
     </Routes>
     <GoToTop/> 
     <Footer/>

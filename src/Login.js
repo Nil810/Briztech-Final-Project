@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import './CSS-Files/Login.css';
 import {Link, useNavigate} from "react-router-dom";
 import axios from "axios";
@@ -9,44 +9,36 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   const[email,setEmail]= useState('')
   const[password,setPassword]=useState('')
 
-  
-  async function submit(e){
-    e.preventDefault();
-
-    try{
-        await axios.post("http://localhost:8000/login",{
-          email,password
-        
-    })
-        .then(res=>{
-          if(res.data==="Already exist"){
-            toast("Login Successful! 😊");
-            history("/") //Redirect to homepage
-          }
-         
-          else if(res.data=== "Not exist"){
-  
-            toast("Invalid username or password. Please sign up! ");
-          }
-        })
-
-        .catch(e=>{
-          toast("Invalid username or password! ");
-          console.log(e);
-        })
-
-      }
-    catch(e){
-        console.log(e);
+  useEffect(()=>{
+    const auth = localStorage.getItem('user');
+    if(auth){
+        navigate('/');
     }
-
+})
+const handleLogin =async ()=>{
+  let result = await fetch("http://localhost:8000/login",
+    {
+      method:"POST",
+      body:JSON.stringify({email,password}),
+      headers:{
+        "Content-Type":"application/json"
+      }
+    })
+  result = await result.json();
+  if(result.name){
+    localStorage.setItem("user",JSON.stringify(result));
+    toast("Login Successful! 😊");
+    navigate("/");
   }
-
+  else{
+    toast("Invalid username or password. Please sign up! ");
+  }
+}
 
   return (
   <>
@@ -63,12 +55,12 @@ const Login = () => {
         <h1>User Login</h1><br/>
 
       
-        <input type="email" onChange={(e)=>{setEmail(e.target.value)}} className="user" placeholder="Email" required/><i className="fas fa-user"></i>
+        <input type="email" value= {email} onChange={(e)=>{setEmail(e.target.value)}} className="user" placeholder="Email" required/><i className="fas fa-user"></i>
         <br/>
-        <input type="password" onChange={(e)=>{setPassword(e.target.value)}} className="password" placeholder="Password" required/><i className="fas fa-lock"></i>
+        <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} className="password" placeholder="Password" required/><i className="fas fa-lock"></i>
         <p className="drop"></p><br/>
 
-        <button className="login-btn" onClick={submit}>Login</button><br/>
+        <button className="login-btn" onClick={handleLogin}>Login</button><br/>
        
 
         <p className="forget">Forgot Password? <a href>Click Here</a></p><br/>

@@ -1,7 +1,6 @@
 import React from 'react';
 import '../CSS-Files/Footer.css';
 import {Link} from "react-router-dom";
-
 const Footer = () => {
     const scrollToTop =()=>{
         window.scrollTo(0,0);

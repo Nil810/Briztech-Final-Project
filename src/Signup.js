@@ -1,47 +1,43 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import './CSS-Files/Login.css';
 import {useNavigate,Link} from "react-router-dom";
-import axios from "axios";
 import './CSS-Files/Home.css';
 import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const Signup = () => {
+const SignUp = () => {
   
-  const history = useNavigate();
+  const navigate = useNavigate();
+  const[name,setName]=useState('')
   const[email,setEmail]=useState('')
   const[password,setPassword]=useState('')
 
-  async function submit(e){
-    e.preventDefault();
+  useEffect(()=>{
+      const auth = localStorage.getItem('user');
+      if(auth){
+          navigate('/');
+      }
+  })
 
-    try{
-        await axios.post("http://localhost:8000/signup",{
-          email,password
-        })
+  const submit = async ()=>{
+    console.warn(name,email,password);
+    let result =await fetch("http://localhost:8000/signup",
+      {
+        method: "POST",
+        body: JSON.stringify({name,email,password}),
+        headers:{"Content-Type":"application/json"}
+      })
+      result = await result.json();
+      console.log(result);
 
-        .then(res=>{
-          if(res.data==="Already exist"){
-            // history("/")
-            toast("User already exist. Please login.");
-          }
-         
-          else if(res.data==="Not exist"){
-            history("/login")
-          
-          }
-        })
+      localStorage.setItem("user",JSON.stringify(result));
 
-        .catch(e=>{
-          toast("Invalid username or password.");
-          console.log(e);
-        })
-
-    }
-    catch(e){
-        console.log(e);
-    }
+      if(result)
+      {
+        navigate('/login');
+      }
+  
   }
 
   return (
@@ -50,16 +46,25 @@ const Signup = () => {
 
     <div className="signup-outer">
     <img src="/Briztech-Final-Project/images/backg2.jpg" alt="background" className="login-bg"/>
+
       <div className="signup-inner">
      
 
         <Link to={"/"}><button className="close" id="signin-close">X</button></Link>
+
         <h1>User Sign Up</h1><br/>
-        <input type="email" onChange={(e)=>{setEmail(e.target.value)}} id="user" placeholder="Username" required/><i className="fas fa-user"></i><br/>
-        <input type="password" onChange={(e)=>{setPassword(e.target.value)}} id="password" placeholder="Password" required/><i className="fas fa-lock"></i><br/>
-        <input type="password" id="cnfrmpass" placeholder=" Confirm Your Password" required/><i className="fas fa-lock"></i>
-        <p id="drop"></p><br/>
+        
+        <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} placeholder="Name" required/>
+        <i className="fas fa-user"></i><br/>
+        <input type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder="Email" required/>
+        <i className="fas fa-envelope"></i><br/>
+        <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder="Password" required/>
+        <i className="fas fa-lock"></i><br/>
+       
+        {/* <p id="drop"></p><br/> */}
+
         <button className="login-btn" onClick={submit}>Sign Up</button><br/>
+
         <p className="forget">Already Registered? <Link>Click Here</Link></p>
         <p className="Create" id="log-page"><Link to={"/login"}>Login</Link></p>
         
@@ -74,4 +79,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUp;

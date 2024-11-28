@@ -1,14 +1,19 @@
 import '../CSS-Files/Header.css';
-import{Link} from "react-router-dom";
 import React, {useRef} from 'react';
+import{Link,useNavigate} from "react-router-dom";
 
 const Header = ({cartItems}) => {
-    
 
+    const auth = localStorage.getItem('user');
+    const navigate = useNavigate();
     const productsRef=useRef();
     const moreRef=useRef();
     const cartRef=useRef();
-
+    
+    const logout =()=>{
+        localStorage.clear();
+        navigate('/login');
+    }
     const scrollToTop =()=>{
         window.scrollTo(0,0);
     }
@@ -100,13 +105,20 @@ const Header = ({cartItems}) => {
        
            <span className="sign">
 
-           <span className="user-out">
-            Log Out
-            </span>
-
+           
+            {
+            auth ? 
+            <Link onClick={logout} to="/login">
+            &emsp;&emsp;Log Out&ensp;
+            </Link> 
+            : 
             <Link to={"/login"} className="log-sign">
-            <span className="user-in" onMouseUp={scrollToTop}>Log In|Sign Up&nbsp;</span>
-             </Link>     
+            <span className="user-in" onMouseUp={scrollToTop}>
+                Log In|Sign Up&nbsp;
+            </span>
+            </Link>            
+             }
+                 
 
             <i class="fa-solid fa-circle-user log-user"></i>
          
