@@ -20,13 +20,38 @@ const scrollToTop = ()=>{
   window.scrollTo(0,0);
 }
 
-const orderHandle = async () =>{
+const orderHandle = async () => {
+  try {
+    const orderData = cartItems.map(item => ({
+      name: item.names,
+      price: item.price,
+      mrp: item.mrp, 
+      discount: item.discount,
+      quantity: item.quantity,
+      total: item.price * item.quantity
+    }));
+
+    const response = await fetch('http://localhost:8000/cart', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(orderData)
+    });
+
+    const data = await response.json();
+    console.log('Server response:', data);
+    
     toast("Order Successful. It will reach you in 3-4 working days!");
-    setTimeout(() =>{
+    setTimeout(() => {
       toast("Thank You for Order! 😊");
-    },3000);
+    }, 3000);
   
-    };
+  } catch (err) {
+    console.error('Order error:', err);
+    toast.error("Failed to place order");
+  }
+};
 
  
   return (

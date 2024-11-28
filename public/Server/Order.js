@@ -2,10 +2,11 @@ const mongoose= require('mongoose');
 
 const orderSchema = new mongoose.Schema({
         name:String,
-        price:Number, 
-        mrp:Number,
-        discount:Number,
-        total:Number
+        price:String, 
+        mrp:String,
+        discount:String,
+        quantity:String,
+        total:String,
     });
 
-    module.exports = mongoose.model("orders",orderSchema);
+    module.exports = mongoose.model("Orders",orderSchema);

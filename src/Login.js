@@ -28,13 +28,13 @@ const handleLogin =async ()=>{
       }
     })
   result = await result.json();
-  if(result.name){
+  if(result){
     localStorage.setItem("user",JSON.stringify(result));
     toast("Login Successful! 😊");
     navigate("/");
   }
   else{
-    toast("Invalid username or password. Please sign up! ");
+    toast.error("Invalid username or password!");
   }
 }
 

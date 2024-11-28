@@ -21,7 +21,11 @@ const SignUp = () => {
   })
 
   const submit = async ()=>{
-    console.warn(name,email,password);
+    if (!name || !email || !password) {
+      toast.error("Please fill all fields");
+      return;
+    }
+
     let result =await fetch("http://localhost:8000/signup",
       {
         method: "POST",
@@ -29,12 +33,12 @@ const SignUp = () => {
         headers:{"Content-Type":"application/json"}
       })
       result = await result.json();
-      console.log(result);
-
-      localStorage.setItem("user",JSON.stringify(result));
-
-      if(result)
-      {
+      
+      if (result.error) {
+        toast.error(result.error);
+      } else {
+        // localStorage.setItem("user", JSON.stringify(result));
+        toast.success("Registration Successful!");
         navigate('/login');
       }
   
@@ -59,8 +63,6 @@ const SignUp = () => {
         <i className="fas fa-envelope"></i><br/>
         <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder="Password" required/>
         <i className="fas fa-lock"></i><br/>
-       
-        {/* <p id="drop"></p><br/> */}
 
         <button className="login-btn" onClick={submit}>Sign Up</button><br/>
 

@@ -1,7 +1,7 @@
 const express = require("express");
+const Order = require('./Order');
 require("./Config")
 let User = require("./User");
-let Order = require("./Order");
 const cors = require("cors");
 const app = express();
 app.use(express.json());//Middleware
@@ -31,6 +31,22 @@ app.post("/login", async (req,res)=>{
     res.send({result:"Please enter both email and password!"});
     }
 })
+
+app.post("/cart", async (req, res) => {
+    try {
+      const orders = req.body;
+      const savedOrders = await Order.insertMany(orders);
+      res.status(200).json({
+        message: "Orders saved successfully",
+        orders: savedOrders
+      });
+    } catch (error) {
+      res.status(500).json({
+        message: "Error saving orders",
+        error: error.message
+      });
+    }
+  });
 
 app.listen(8000, () => {
     console.log("running on port 8000");
