@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Cart = ({cartItems, handleAddProduct , handleRemoveProduct, handleCartClear}) => {
 
-
 let totalPrice = cartItems.reduce((price, item) => price + item.price * item.quantity, 0);
 
 // const [orderPlaced, setOrderPlaced] = useState(false);

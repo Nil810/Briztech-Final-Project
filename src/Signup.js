@@ -48,8 +48,7 @@ const SignUp = () => {
     <img src="/Briztech-Final-Project/images/backg2.jpg" alt="background" className="login-bg"/>
 
       <div className="signup-inner">
-     
-
+    
         <Link to={"/"}><button className="close" id="signin-close">X</button></Link>
 
         <h1>User Sign Up</h1><br/>
@@ -75,7 +74,6 @@ const SignUp = () => {
   </div>
 
    </>
-
   );
 };
 

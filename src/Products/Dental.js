@@ -25,7 +25,7 @@ const Dental = ({productItems3,handleAddProduct}) => {
     <br/>
     <div className="price">
         <h4><u>MRP: ₹{productItem.price}</u></h4>&nbsp;
-        <h4 className="price-cross">₹{productItem.price2}</h4>
+        <h4 className="price-cross">₹{productItem.mrp}</h4>
         <h3>{productItem.discount} off</h3>
         </div>
 

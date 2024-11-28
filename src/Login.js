@@ -1,16 +1,14 @@
 import React, {useState,useEffect} from 'react';
-import './CSS-Files/Login.css';
-import {Link, useNavigate} from "react-router-dom";
-import axios from "axios";
 import './CSS-Files/Home.css';
-import { ToastContainer, toast} from 'react-toastify';
+import './CSS-Files/Login.css';
 import 'react-toastify/dist/ReactToastify.css';
+import {Link, useNavigate} from "react-router-dom";
+import { ToastContainer, toast} from 'react-toastify';
 
 
 const Login = () => {
 
   const navigate = useNavigate();
-
   const[email,setEmail]= useState('')
   const[password,setPassword]=useState('')
 
@@ -53,8 +51,7 @@ const handleLogin =async ()=>{
         <Link to={"/"}><button className="close" id="login-close">X</button></Link>
 
         <h1>User Login</h1><br/>
-
-      
+    
         <input type="email" value= {email} onChange={(e)=>{setEmail(e.target.value)}} className="user" placeholder="Email" required/><i className="fas fa-user"></i>
         <br/>
         <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} className="password" placeholder="Password" required/><i className="fas fa-lock"></i>
@@ -62,7 +59,6 @@ const handleLogin =async ()=>{
 
         <button className="login-btn" onClick={handleLogin}>Login</button><br/>
        
-
         <p className="forget">Forgot Password? <a href>Click Here</a></p><br/>
 
         <Link to={"/signup"}> <p className="Create" id="sign-page">Create Account</p></Link>
