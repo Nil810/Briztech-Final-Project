@@ -38,7 +38,7 @@ const SignUp = () => {
         toast.error(result.error);
       } else {
         // localStorage.setItem("user", JSON.stringify(result));
-        toast.success("Registration Successful!");
+        toast("Registration Successful!");
         navigate('/login');
       }
   

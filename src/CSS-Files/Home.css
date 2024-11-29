@@ -24,7 +24,6 @@
     font-size: 1.6rem;
     background: #111;
     cursor: pointer;
-    position: relative;
     z-index: 0;
     border-radius: 0.5rem;
   }
@@ -367,7 +366,6 @@ opacity:0.4;
     justify-content: center;
     align-items: center;
     color:rgb(238, 241, 14);
-    justify-content: center;
     transition:all 0.8s ease-in-out;
     border-bottom-left-radius: 2rem;
     background-color: none;

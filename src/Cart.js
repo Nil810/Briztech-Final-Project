@@ -19,8 +19,12 @@ const scrollToTop = ()=>{
 
 const orderHandle = async () => {
   try {
+    const userData = JSON.parse(localStorage.getItem('user'));
+
     const orderData = cartItems.map(item => ({
-      name: item.names,
+      userId:userData._id,
+      userName: userData.name,
+      product: item.names,
       price: item.price,
       mrp: item.mrp, 
       discount: item.discount,

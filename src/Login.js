@@ -30,7 +30,11 @@ const handleLogin =async ()=>{
   result = await result.json();
   if(result){
     localStorage.setItem("user",JSON.stringify(result));
+   
     toast("Login Successful! 😊");
+    setTimeout(() => {
+      toast(`Welcome ${result.name}`);
+    }, 2000);
     navigate("/");
   }
   else{

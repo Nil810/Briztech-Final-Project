@@ -6,6 +6,9 @@ const Header = ({cartItems}) => {
 
     const auth = localStorage.getItem('user');
     const navigate = useNavigate();
+
+    const profileRef = useRef();
+    const userData = auth ? JSON.parse(auth) : null;
     const productsRef=useRef();
     const moreRef=useRef();
     const cartRef=useRef();
@@ -48,7 +51,13 @@ const Header = ({cartItems}) => {
     const barClick= () =>{
         cartRef.current.style.display="block";
     }
+    const profileHover = () => {
+        profileRef.current.style.display = "block";
+    };
 
+    const profileLeave = () => {
+        profileRef.current.style.display = "none";
+    };
 
   return (
   
@@ -108,22 +117,34 @@ const Header = ({cartItems}) => {
            
             {
             auth ? 
+                <>
             <Link onClick={logout} to="/login">
             &emsp;&emsp;Log Out&ensp;
             </Link> 
+
+
+             <i className="fa-solid fa-circle-user log-user" onClick={profileHover}></i>
+             <div className="profile-popup" ref={profileRef} onMouseLeave={profileLeave}>
+                 <div className="profile-content">
+                     <h3>Profile Details</h3>
+                     <p><i className="fa-solid fa-user"></i> {userData?.name}</p>
+                     <p><i className="fa-solid fa-envelope"></i> {userData?.email}</p>
+                 </div>
+             </div>
+         </> 
             : 
             <Link to={"/login"} className="log-sign">
             <span className="user-in" onMouseUp={scrollToTop}>
                 Log In|Sign Up&nbsp;
             </span>
-            </Link>            
-             }
-                 
 
             <i class="fa-solid fa-circle-user log-user"></i>
+
+            </Link>            
+             }       
          
            </span> 
-        
+    
     </div>
     
     </div>
