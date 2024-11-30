@@ -60,7 +60,7 @@ const orderHandle = async () => {
           <a href="https://wa.me/918102774475" target=""><img src="/Briztech-Final-Project/images/chatbot.gif" alt="chatbot" className="chat-gif"/></a>
      
             <div className="cart-items">
-              <h2 className="cart-items-header fa-fade">Cart Items</h2>
+              <h2 className="cart-items-header">Cart Items</h2>
               <div className="clear-cart">
                 {
                   cartItems.length >= 1 && (
@@ -108,11 +108,10 @@ const orderHandle = async () => {
                   Total Price:&nbsp;
                   <div className="cart-items-total-price fa-fade" >
                    ₹{totalPrice}.00
-
-                  </div>
+                   
+                  </div>             
                 </div>
-               
-                <button class="bn4 odr-btn" ref={orderSuccess} onClick={function(event){orderHandle(); scrollToTop(); handleCartClear()}}>Buy Now</button>
+                <button className="bn4 odr-btn" ref={orderSuccess} onClick={function(event){orderHandle(); scrollToTop(); handleCartClear()}}>Buy Now</button>            
                 {/* <br/>{orderPlaced && <p><b>Order placed successfully!</b></p>}<br/> */}
                 <ToastContainer className={"toast-cart"}/>
             </div>
