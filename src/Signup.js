@@ -9,9 +9,11 @@ import 'react-toastify/dist/ReactToastify.css';
 const SignUp = () => {
   
   const navigate = useNavigate();
-  const[name,setName]=useState('')
-  const[email,setEmail]=useState('')
-  const[password,setPassword]=useState('')
+  const[name,setName]=useState('');
+  const[email,setEmail]=useState('');
+  const[password,setPassword]=useState('');
+  const [emailError, setEmailError] = useState('');
+  const [passwordError, setPasswordError] = useState('');
 
   useEffect(()=>{
       const auth = localStorage.getItem('user');
@@ -20,7 +22,13 @@ const SignUp = () => {
       }
   })
 
-  const submit = async ()=>{
+  const submit = async (event)=>{
+    event.preventDefault();
+
+    const isValid = handleError();
+    if (!isValid) {
+      return;
+  }
     if (!name || !email || !password) {
       toast.error("Please fill all fields");
       return;
@@ -38,11 +46,50 @@ const SignUp = () => {
         toast.error(result.error);
       } else {
         // localStorage.setItem("user", JSON.stringify(result));
-        toast("Registration Successful!");
+        setTimeout(() => {
+          toast("Registration Successful!");
+        }, 1000);
+        
         navigate('/login');
       }
   
   }
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+  
+  const validatePassword = (password) => {
+    // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    return passwordRegex.test(password);
+  };
+  
+  const handleError = () => {
+    let isValid = true;
+    
+    if (!email) {
+      setEmailError('Email is required!');
+      isValid = false;
+    } else if (!validateEmail(email)) {
+      setEmailError('Please enter a valid email address!');
+      isValid = false;
+    } else {
+      setEmailError('');
+    }
+  
+    if (!password) {
+      setPasswordError('Password is required!');
+      isValid = false;
+    } else if (!validatePassword(password)) {
+      setPasswordError('Password must contain at least 8 characters, including uppercase, lowercase, number and special character!');
+      isValid = false;
+    } else {
+      setPasswordError('');
+    }
+  
+    return isValid;
+  };
 
   return (
     <>
@@ -55,16 +102,39 @@ const SignUp = () => {
     
         <Link to={"/"}><button className="close" id="signin-close">X</button></Link>
 
-        <h1>User Sign Up</h1><br/>
+        <h1>User Sign Up</h1>
         
-        <input type="text" value={name} onChange={(e)=>{setName(e.target.value)}} placeholder="Name" required/>
+        <input type="text" 
+               value={name} 
+               onChange={(e)=>{setName(e.target.value)}} 
+               placeholder="Name" 
+               required/>
         <i className="fas fa-user"></i><br/>
-        <input type="email" value={email} onChange={(e)=>{setEmail(e.target.value)}} placeholder="Email" required/>
+
+        <input type="email" 
+               value={email} onChange={(e)=>{setEmail(e.target.value)}} 
+               placeholder="Email"
+               required/>  
+
         <i className="fas fa-envelope"></i><br/>
-        <input type="password" value={password} onChange={(e)=>{setPassword(e.target.value)}} placeholder="Password" required/>
+
+        {emailError && <span className='invalid-input'>{emailError}</span>} 
+
+        <input type="password" 
+               value={password} 
+               onChange={(e)=>{setPassword(e.target.value)}} 
+               placeholder="Password" 
+               required/>
+        
         <i className="fas fa-lock"></i><br/>
 
-        <button className="login-btn" onClick={submit}>Sign Up</button><br/>
+        {passwordError && <span className='invalid-input'>{passwordError}</span>}
+
+        <button className="sign-btn" 
+                onClick={submit}>
+                Sign Up
+        </button>
+        <br/>
 
         <p className="forget">Already Registered? <Link>Click Here</Link></p>
         <p className="Create" id="log-page"><Link to={"/login"}>Login</Link></p>

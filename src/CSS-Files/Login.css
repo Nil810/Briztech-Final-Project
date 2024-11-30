@@ -9,7 +9,7 @@
     text-align: center;
     color:rgb(87, 22, 22);
     font-weight: 500;
-    margin:-9.4rem 5rem;
+    margin-top:-4.4rem;
     filter:drop-shadow( 1rem 1rem 2rem #2e2e03);
     border-radius: 1rem;
 }
@@ -33,7 +33,7 @@
 }
 .login-inner {
     color: white;
-    height:45rem;
+    height:46rem;
     width:45rem;
     margin: auto;
     position: relative;
@@ -42,7 +42,6 @@
     backdrop-filter: blur(1rem);
     border: 0.1rem solid rgb(180, 180, 180);
     box-shadow: 0rem 0rem 1.5rem rgba(230, 227, 109, 0.438);
-    /* filter:drop-shadow( 0rem 0rem 1rem #292928); */
     border-radius: 0.3rem;
     text-align: center;
 }
@@ -61,7 +60,6 @@ color:rgb(1, 1, 54);
     backdrop-filter: blur(1rem);
     border: 0.1rem solid rgb(180, 180, 180);
     box-shadow: 0rem 0rem 1.5rem rgba(230, 227, 109, 0.438);
-    /* filter:drop-shadow( 0rem 0rem 1rem #292928); */
     border-radius: 0.3rem;
     text-align: center;
 }
@@ -103,7 +101,7 @@ color:rgb(1, 1, 54);
     color: white;
 }
 
-.login-btn {
+.login-btn , .sign-btn{
     font-size: 1.8rem;
     font-weight: 600;
     padding: 0.5rem 2rem;
@@ -163,4 +161,11 @@ color:rgb(1, 1, 54);
 Link{
     text-decoration: none;
     color: black;
+}
+.invalid-input{
+    color:red;
+    margin-top: -1rem;
+    font-size: 1.8rem;
+    display: block;
+    
 }
