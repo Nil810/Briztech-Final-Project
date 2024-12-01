@@ -120,6 +120,7 @@
     display: flex;
     font-size: 2.2rem;
     text-decoration: underline;
+    padding-left:1rem;
     font-weight: 700;
 }
 .odr-btn{

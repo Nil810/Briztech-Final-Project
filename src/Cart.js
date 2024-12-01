@@ -108,9 +108,11 @@ const orderHandle = async () => {
                   Total Price:&nbsp;
                   <div className="cart-items-total-price fa-fade" >
                    ₹{totalPrice}.00
-                   
-                  </div>             
+                  
+                  </div>
+                           
                 </div>
+                {/* <button style={{fontSize:"15px" ,position:"absolute", right:"0px", height:"30px",width:"100px",borderRadius:"10px"}}>Buy Now</button>    */}
                 <button className="bn4 odr-btn" ref={orderSuccess} onClick={function(event){orderHandle(); scrollToTop(); handleCartClear()}}>Buy Now</button>            
                 {/* <br/>{orderPlaced && <p><b>Order placed successfully!</b></p>}<br/> */}
                 <ToastContainer className={"toast-cart"}/>

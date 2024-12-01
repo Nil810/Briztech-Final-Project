@@ -46,10 +46,6 @@ const SignUp = () => {
         toast.error(result.error);
       } else {
         // localStorage.setItem("user", JSON.stringify(result));
-        setTimeout(() => {
-          toast("Registration Successful!");
-        }, 1000);
-        
         navigate('/login');
       }
   
