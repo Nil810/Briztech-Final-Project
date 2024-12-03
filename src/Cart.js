@@ -9,8 +9,7 @@ import {loadStripe} from '@stripe/stripe-js';
 const Cart = ({cartItems, handleAddProduct , handleRemoveProduct, handleCartClear}) => {
 
 let totalPrice = cartItems.reduce((price, item) => price + item.price * item.quantity, 0);
-let eachPrice = cartItems.reduce((item) =>  item.quantity * item.price,0);
-// const [orderPlaced, setOrderPlaced] = useState(false);
+
 
 const orderSuccess=useRef();
 
@@ -44,10 +43,10 @@ const orderHandle = async () => {
     const data = await response.json();
     console.log('Server response:', data);
     
-    toast("Order Successful. It will reach you in 3-4 working days!");
-    setTimeout(() => {
-      toast("Thank You for Order! 😊");
-    }, 3000);
+    // toast("Order Successful. It will reach you in 3-4 working days!");
+    // setTimeout(() => {
+    //   toast("Thank You for Order! 😊");
+    // }, 3000);
   
   } catch (err) {
     console.error('Order error:', err);

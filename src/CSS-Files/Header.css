@@ -72,7 +72,7 @@
 .bn4 {
     padding: 0.6rem 1.3rem;
     position: relative;
-    bottom:15rem;
+    /* bottom:15rem; */
     text-decoration: none;
     border: none;
     outline: none;
@@ -284,7 +284,7 @@
     }
     .lists:hover{
         filter:drop-shadow( 0rem 0rem 1.5rem rgb(8, 8, 8));
-              color:rgb(235, 172, 90);
+        color:rgb(235, 172, 90);
     
     }
     .nav-items{

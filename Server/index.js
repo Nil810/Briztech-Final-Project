@@ -7,6 +7,7 @@ const app = express();
 app.use(express.json());//Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());//Middleware
+const stripe = require('stripe')('sk_test_51QRw29GBbiNJ7Qs4laxJsOPZ1a6UpEJFSA9Z91chhUisZuSaeyu1p6lLgXlHE71yOzZGqzi9byLevlOKEQ77Y9xm00MgztD596');
 
 app.post("/signup", async (req,res)=>{
     let user = new User(req.body);
@@ -47,6 +48,36 @@ app.post("/cart", async (req, res) => {
       });
     }
   });
+
+  //checkout api
+app.post("/api/create-checkout-session", async (req, res) => {
+  const {products} = req.body;
+
+  const lineItems = products.map((product)=>({
+    
+    price_data:{
+    currency:"inr",
+
+    product_data:{
+      name: product.names,
+    },
+    unit_amount:product.price*100,
+    },
+    quantity:product.quantity
+  }));
+
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: lineItems,
+    mode: 'payment',
+    success_url: 'https://localhost:3000/success',
+    cancel_url: 'https://localhost:3000/cancel',
+  });
+
+  res.json({ id: session.id });
+})
+
+
 
 app.listen(8000, () => {
     console.log("running on port 8000");

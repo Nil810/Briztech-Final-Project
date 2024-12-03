@@ -13,6 +13,8 @@ import BlogPage3 from './Blogs/BlogPage3';
 import Login from './Login';
 import SignUp from './SignUp';
 import data from './Products/Data';
+import Success from './Components/Success';
+import Cancel from './Components/Cancel';
 import PrivateComponent from './Components/PrivateComponent';
 
 import Cart from './Cart';
@@ -72,7 +74,8 @@ const App = () => {
 
     <Header cartItems={cartItems}/>
     <Routes> 
-           
+    <Route path="/success" element={<Success/>}/>
+    <Route path= "/cancel" element={<Cancel/>}/>
             <Route element={<PrivateComponent/>}>
             <Route path="/about" element={<About/>}/>
             <Route path="/products" element={<Products/>}/>
@@ -88,7 +91,10 @@ const App = () => {
             <Route path="/shampoo" element={<Shampoo productItems5={productItems5} handleAddProduct={handleAddProduct}/>}/>
             <Route path="/skin" element={<Skin productItems6={productItems6} handleAddProduct={handleAddProduct}/>}/>
             <Route path="/cart" element={<Cart cartItems={cartItems} handleAddProduct={handleAddProduct} handleRemoveProduct={handleRemoveProduct} handleCartClear={handleCartClear}/>}/>
+           
+           
             </Route>
+            
             <Route path="/" element={<Home/>}/>
             <Route path="/signup" element={<SignUp/>}/>
             <Route path="/login" element={<Login/>} />
