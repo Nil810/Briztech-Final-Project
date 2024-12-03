@@ -3,12 +3,13 @@ import './CSS-Files/Header.css';
 import { useRef } from 'react';
 import { ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {loadStripe} from '@stripe/stripe-js';
 
 
 const Cart = ({cartItems, handleAddProduct , handleRemoveProduct, handleCartClear}) => {
 
 let totalPrice = cartItems.reduce((price, item) => price + item.price * item.quantity, 0);
-
+let eachPrice = cartItems.reduce((item) =>  item.quantity * item.price,0);
 // const [orderPlaced, setOrderPlaced] = useState(false);
 
 const orderSuccess=useRef();
@@ -54,13 +55,43 @@ const orderHandle = async () => {
   }
 };
 
+
+
+const makePayment =async ()=>{
+  const stripe = await loadStripe("pk_test_51QRw29GBbiNJ7Qs4EcKcIhN5kBsR77Vkrp8uNiN3eQHFEXKKEm9eXFp0t30Eo15vAIyj9tRlXG8QaV2ll0GsXegK00y686yBta");
+
+  const body = {
+    products:cartItems
+  }
+ 
+  const response = await fetch("http://localhost:8000/api/create-checkout-session",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify(body)
+    
+  })
+  const session = await response.json();
+  console.log(session);
+  const result = await stripe.redirectToCheckout({
+    sessionId:session.id
+  });
+  if(result.error){
+    console.warn(result.error.message);
+  }
+}
+
  
   return (
         <div className="cart-outerdiv">
+
           <a href="https://wa.me/918102774475" target=""><img src="/Briztech-Final-Project/images/chatbot.gif" alt="chatbot" className="chat-gif"/></a>
      
             <div className="cart-items">
-              <h2 className="cart-items-header">Cart Items</h2>
+
+              <div className="cart-items-header">
+              <h2 className="cart-items-headtext">Cart Items</h2>
+              </div>
+
               <div className="clear-cart">
                 {
                   cartItems.length >= 1 && (
@@ -82,20 +113,28 @@ const orderHandle = async () => {
 
                 {cartItems.map((item) => (
                     <div key={item.id} className="cart-items-list">
+                      <i class="fa-solid fa-trash-can trash"></i>
                       
                       <img className="cart-items-image" src={item.image} alt=""/>
 
                       <div className="cart-items-name">
                       {item.names}
                       </div>
+
+                      <div className="cart-items-mrp">
+                      ₹{item.price}
+                      </div>
+                      
                       <div className="cart-items-function">
 
+                      <button className="cart-items-remove" onClick={() => handleRemoveProduct(item)}>-</button> 
+                        {item.quantity}                      
                         <button className="cart-items-add" onClick={() => handleAddProduct(item)}>+</button>
-                        <button className="cart-items-remove" onClick={() => handleRemoveProduct(item)}>-</button>
 
                       </div>
                       <div className="cart-items-price">
-                        {item.quantity} * ₹{item.price}
+                      ₹{item.quantity * item.price}
+                        {/* {eachPrice} */}
                       </div>
 
                     </div>
@@ -104,22 +143,28 @@ const orderHandle = async () => {
                 ))}
 
               </div>
+
                 <div className="cart-items-total-price-name">
                   Total Price:&nbsp;
                   <div className="cart-items-total-price fa-fade" >
                    ₹{totalPrice}.00
                   
                   </div>
-                           
+                          
                 </div>
-                {/* <button style={{fontSize:"15px" ,position:"absolute", right:"0px", height:"30px",width:"100px",borderRadius:"10px"}}>Buy Now</button>    */}
-                <button className="bn4 odr-btn" ref={orderSuccess} onClick={function(event){orderHandle(); scrollToTop(); handleCartClear()}}>Buy Now</button>            
-                {/* <br/>{orderPlaced && <p><b>Order placed successfully!</b></p>}<br/> */}
+
+                <button 
+                className="bn4 odr-btn" 
+                ref={orderSuccess} 
+                onClick={function(event){orderHandle(); scrollToTop(); handleCartClear(); makePayment();}}>
+                  Checkout
+                </button>          
+          
                 <ToastContainer className={"toast-cart"}/>
             </div>
             
-        </div>
+        </div> 
   );
-};
+};    
 
 export default Cart;
