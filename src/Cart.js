@@ -47,11 +47,6 @@ const orderHandle = async () => {
 
     const data = await response.json();
     console.log('Server response:', data);
-    
-    // toast("Order Successful. It will reach you in 3-4 working days!");
-    // setTimeout(() => {
-    //   toast("Thank You for Order! 😊");
-    // }, 3000);
   
   } catch (err) {
     console.error('Order error:', err);

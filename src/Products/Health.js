@@ -45,7 +45,7 @@ const Health = ({productItems4,handleAddProduct}) => {
 <div className=" nxt-arrow">
     <i className="fa-sharp fa-solid fa-angle-right fa-beat-fade arrow arrow1"></i>
 </div>
-<ToastContainer/>
+<ToastContainer className="toast-add"/>
 </>
 
   );
