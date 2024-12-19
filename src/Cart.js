@@ -6,16 +6,21 @@ import 'react-toastify/dist/ReactToastify.css';
 import {loadStripe} from '@stripe/stripe-js';
 
 
-const Cart = ({cartItems, handleAddProduct , handleRemoveProduct, handleCartClear}) => {
+const Cart = ({cartItems, handleAddProduct , handleRemoveProduct, handleRemoveItem, handleCartClear}) => {
 
 let totalPrice = cartItems.reduce((price, item) => price + item.price * item.quantity, 0);
-
 
 const orderSuccess=useRef();
 
 const scrollToTop = ()=>{
   window.scrollTo(0,0);
 }
+
+const clearEachItem = (productId) => {
+  handleRemoveItem(productId);
+  toast.success("Item removed from cart!");
+};
+
 
 const orderHandle = async () => {
   try {
@@ -55,18 +60,18 @@ const orderHandle = async () => {
 };
 
 
-
 const makePayment =async ()=>{
   const stripe = await loadStripe("pk_test_51QRw29GBbiNJ7Qs4EcKcIhN5kBsR77Vkrp8uNiN3eQHFEXKKEm9eXFp0t30Eo15vAIyj9tRlXG8QaV2ll0GsXegK00y686yBta");
 
-  const body = {
-    products:cartItems
-  }
- 
   const response = await fetch("http://localhost:8000/api/create-checkout-session",{
     method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify(body)
+    headers:{
+      "Content-Type":"application/json",
+      "Accept": "application/json"
+    },
+    body:JSON.stringify({
+      products:cartItems
+    })
     
   })
   const session = await response.json();
@@ -112,7 +117,10 @@ const makePayment =async ()=>{
 
                 {cartItems.map((item) => (
                     <div key={item.id} className="cart-items-list">
-                      <i class="fa-solid fa-trash-can trash"></i>
+
+                      <button className="trash" onClick={() => clearEachItem(item.id)}>
+                        <i className="fa-solid fa-trash-can"></i>
+                      </button>
                       
                       <img className="cart-items-image" src={item.image} alt=""/>
 
@@ -133,11 +141,9 @@ const makePayment =async ()=>{
                       </div>
                       <div className="cart-items-price">
                       ₹{item.quantity * item.price}
-                        {/* {eachPrice} */}
                       </div>
 
                     </div>
-
                   
                 ))}
 

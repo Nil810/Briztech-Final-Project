@@ -1,7 +1,8 @@
 import React from 'react';
 import '../CSS-Files/Products.css';
 import Marquee from "react-fast-marquee";
-
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Dental = ({productItems3,handleAddProduct}) => {
   return (
@@ -29,8 +30,9 @@ const Dental = ({productItems3,handleAddProduct}) => {
         <h3>{productItem.discount} off</h3>
         </div>
 
-   <button onClick={() => handleAddProduct(productItem)}><b>ADD TO CART</b></button>
-
+   <button onClick={(e) => {
+    toast.success('Item added to cart!');
+    handleAddProduct(productItem)}}><b>ADD TO CART</b></button>
 </div>
 
 ))};
@@ -44,6 +46,7 @@ const Dental = ({productItems3,handleAddProduct}) => {
     <i className="fa-sharp fa-solid fa-angle-right fa-beat-fade arrow arrow1"></i>
 </div>
 
+<ToastContainer />
 </>
   );
 };

@@ -15,8 +15,7 @@
     top:3rem;
     margin-bottom: 10rem;
     width: 70%;
-    box-shadow: 0px 0px 5px #000;  
-    /* background-image: linear-gradient(45deg,rgb(235, 232, 91),rgb(252, 239, 239)); */
+    box-shadow: 0px 0px 5px #000;
     border-radius: 1.5rem;
     border:0.2rem solid gray;
     
@@ -156,6 +155,7 @@
 }
 .trash{
     font-size: 3rem;
+    background: none;
     padding:1rem;
     border: 1rem;
 }

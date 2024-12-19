@@ -58,9 +58,9 @@ const Header = ({cartItems}) => {
     const profileLeave = () => {
         profileRef.current.style.display = "none";
     };
-
+    
   return (
-  
+
     <div className="head">
 
         <div class="float-cart" ref={cartRef} onMouseLeave={cartLeave}>
