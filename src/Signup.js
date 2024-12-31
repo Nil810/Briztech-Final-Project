@@ -34,8 +34,7 @@ const SignUp = () => {
       return;
     }
 
-    // let result =await fetch("http://localhost:8000/signup",
-    let result =await fetch("https://your-herbs.onrender.com/signup",
+    let result =await fetch("http://localhost:8000/signup",
       {
         method: "POST",
         body: JSON.stringify({name,email,password}),

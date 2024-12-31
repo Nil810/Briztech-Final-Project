@@ -37,8 +37,7 @@ const orderHandle = async () => {
       total: item.price * item.quantity
     }));
 
-    // const response = await fetch('http://localhost:8000/cart', {
-      const response = await fetch('https://your-herbs.onrender.com/cart', {
+    const response = await fetch('http://localhost:8000/cart', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -59,8 +58,7 @@ const orderHandle = async () => {
 const makePayment =async ()=>{
   const stripe = await loadStripe("pk_test_51QRw29GBbiNJ7Qs4EcKcIhN5kBsR77Vkrp8uNiN3eQHFEXKKEm9eXFp0t30Eo15vAIyj9tRlXG8QaV2ll0GsXegK00y686yBta");
 
-  // const response = await fetch("http://localhost:8000/api/create-checkout-session",{
-    const response = await fetch("https://your-herbs.onrender.com/api/create-checkout-session",{
+  const response = await fetch("http://localhost:8000/api/create-checkout-session",{
     method:"POST",
     headers:{
       "Content-Type":"application/json",
